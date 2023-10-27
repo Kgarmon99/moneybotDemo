@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>MoneyBot</title>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <img class="logo" src="OGMONEYBOTLOGO.PNG" alt="MoneyBot Logo">
+        <h1 class="app-title">MoneyBot</h1>
+    </header>
+
+    <!-- Registration Page -->
+    <div class="container" id="registration-container">
+        <h1 class="page-title">Join MoneyBot</h1>
+        <!-- Registration form -->
+        <form action="/register" method="POST">
+            <!-- User registration fields -->
+            <input class="input-field" type="text" name="username" placeholder="Username" required>
+            <input class="input-field" type="password" name="password" placeholder="Password" required>
+            <button class="input-field animated-btn" id="registration-next" type="button">Next</button>
+        </form>
+    </div>
+
+    <!-- Avatar Creation Page -->
+    <div class="container" id="avatar-container" style="display: none;">
+        <h1 class="page-title">Create Your MoneyBot Avatar</h1>
+        <!-- Avatar creation form -->
+        <form action="/save-avatar" method="POST">
+            <!-- Avatar customization options -->
+            <div class="avatar-preview"></div>
+            <div class="avatar-options">
+                <label for="hair">Hair:</label>
+                <select name="hair" id="hair">
+                    <option value="hair1">Style 1</option>
+                    <option value="hair2">Style 2</option>
+                    <!-- Add more hair style options here -->
+                </select>
+                <!-- Add more avatar customization options here -->
+                <button class="input-field animated-btn" id="avatar-next" type="button">Next</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Financial Questions Page -->
+    <div class="container" id="financial-container" style="display: none;">
+        <h1 class="page-title">Financial Questions</h1>
+        <!-- Financial questions form -->
+        <form action="/submit-financial" method="POST">
+            <!-- Add financial questions with styling here -->
+            <button class="input-field animated-btn" type="submit" id="financial-next">Next</button>
+        </form>
+    </div>
+
+  <!-- Goal-Setting Page -->
+  <div class="container" id="goal-container" style="display: none;">
+      <h1 class="page-title">Set Your Financial Goals</h1>
+      <form id="goal-form">
+          <input class="input-field" type="text" id="goal-description" placeholder="Goal Description" required>
+          <input class="input-field" type="number" id="goal-amount" placeholder="Goal Amount" required>
+          <input class="input-field" type="date" id="goal-deadline" required>
+          <button class="input-field animated-btn" id="add-goal" type="button">Add Goal</button>
+      </form>
+      <div id="goal-list">
+          <!-- Display added goals here -->
+      </div>
+  </div>
+
+    <!-- Personal Dashboard -->
+    <div class="container" id="dashboard-container" style="display: none;">
+        <h1 class="page-title">Welcome to Your MoneyBot Dashboard</h1>
+        <div class="dashboard-content">
+            <div class="dashboard-item">
+                <h2 class="dashboard-item-title">Financial Goals</h2>
+                <p class="dashboard-item-description">Set and track your financial goals with MoneyBot.</p>
+                <a href="#" class="dashboard-item-button" id="track-income-button">Set Goals</a>
+            </div>
+
+            <div class="dashboard-item">
+                <h2 class="dashboard-item-title">Income Tracker</h2>
+                <p class="dashboard-item-description">Track your income and expenses to stay on budget.</p>
+                <a href="#" class="dashboard-item-button">Track Income</a>
+            </div>
+
+            <div class="dashboard-item">
+                <h2 class="dashboard-item-title">Financial Education</h2>
+                <p class="dashboard-item-description">Access educational content to improve your financial knowledge.</p>
+                <a href="#" class="dashboard-item-button">Learn More</a>
+            </div>
+            <!-- Add more dashboard items as needed -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

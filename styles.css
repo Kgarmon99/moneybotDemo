@@ -1,0 +1,232 @@
+/* Base styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 0px 0px 10px 0px #000000;
+    transform: translateY(0);
+    opacity: 1;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.container:hover {
+    transform: translateY(-10px);
+    opacity: 0.9;
+}
+
+.logo {
+    width: 120px;
+    height: auto;
+    margin-bottom: 20px;
+    animation: float 3s ease infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(0, -10px); }
+}
+
+.app-title {
+    color: #00ff99;
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.page-title {
+    color: #00ff99;
+    margin-bottom: 20px;
+    font-size: 24px;
+    animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+.animated-btn {
+    background-color: #00ff99;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.animated-btn:hover {
+    background-color: #00cc77;
+    transform: scale(1.05);
+}
+
+.input-field {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+}
+
+.input-field::placeholder {
+    color: #ccc;
+}
+
+.input-field:focus {
+    outline: none;
+    box-shadow: 0px 0px 5px #00ff99;
+}
+
+.select-field {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    outline: none;
+}
+
+/* Dashboard styling */
+.dashboard-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.dashboard-item {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0px 0px 10px 0px #00ff99;
+    margin: 10px;
+}
+
+.dashboard-item-title {
+    color: #00ff99;
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.dashboard-item-description {
+    color: white;
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.dashboard-item-button {
+    background-color: #00ff99;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 10px auto;
+    text-decoration: none;
+}
+
+.dashboard-item-button:hover {
+    background-color: #00cc77;
+    transform: scale(1.05);
+}
+
+/* Goal-Setting Page styling */
+#goal-container {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 0px 0px 10px 0px #00ff99;
+    transform: translateY(0);
+    opacity: 1;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    display: none;
+}
+
+#goal-container:hover {
+    transform: translateY(-10px);
+    opacity: 0.9;
+}
+
+#goal-container .page-title {
+    color: #00ff99;
+    margin-bottom: 20px;
+    font-size: 24px;
+    animation: heartbeat 1.5s infinite;
+}
+
+#goal-container .animated-btn {
+    background-color: #00ff99;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#goal-container .animated-btn:hover {
+    background-color: #00cc77;
+    transform: scale(1.05);
+}
+
+#goal-container .input-field {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+}
+
+#goal-container .input-field::placeholder {
+    color: #ccc;
+}
+
+#goal-container .input-field:focus {
+    outline: none;
+    box-shadow: 0px 0px 5px #00ff99;
+}
+
+#goal-container .select-field {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    outline: none;
+}
+
+/* Add more styling here for goal-setting elements */
+/* ... (future code) ... */
+
