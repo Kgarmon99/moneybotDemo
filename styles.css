@@ -5,9 +5,15 @@ body {
     font-family: Arial, sans-serif;
     background-color: black;
     display: flex;
-    justify-content: center;
+    flex-direction: column; /* Added to stack content vertically */
     align-items: center;
     height: 100vh;
+}
+
+header {
+    display: flex;
+    flex-direction: column; /* Added to stack logo and title vertically */
+    align-items: center;
 }
 
 .container {
@@ -34,11 +40,7 @@ body {
     animation: float 3s ease infinite;
 }
 
-@keyframes float {
-    0%, 100% { transform: translate(0, 0); }
-    50% { transform: translate(0, -10px); }
-}
-
+/* Additional styling for MoneyBot title */
 .app-title {
     color: #00ff99;
     font-size: 24px;
@@ -229,4 +231,11 @@ body {
 
 /* Add more styling here for goal-setting elements */
 /* ... (future code) ... */
+/* Example CSS to style the text */
+.confidence-scale {
+    color: #ffffff; /* Text color */
+}
 
+.debt-savings label, .goal-options label {
+    color: #ffffff; /* Text color */
+}

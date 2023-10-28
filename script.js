@@ -9,7 +9,7 @@ const dashboardContainer = document.getElementById('dashboard-container');
 const registrationNextBtn = document.getElementById('registration-next');
 const avatarNextBtn = document.getElementById('avatar-next');
 const financialNextBtn = document.getElementById('financial-next');
-const goalSettingNextBtn = document.getElementById('goal-setting-next'); // Updated ID
+const goalSettingNextBtn = document.getElementById('goal-next'); // Updated ID
 
 // Handle "Next" button clicks
 registrationNextBtn.addEventListener('click', function() {
