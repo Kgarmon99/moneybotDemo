@@ -4,20 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <title>Enter The MoneyVerse!</title>
 </head>
 <body>
     <!-- Header -->
     <header>
         <img class="logo" src="OGMONEYBOTLOGO.PNG" alt="MoneyBot Logo">
-        <h1 class="app-title">MoneyBot</h1>
+        <h1 class="app-title">Welcome To The Revolution!🤖</h1>
     </header>
 
     <!-- Registration Page -->
-    <div class="container" id="registration-container">
+    <div class="container" id="registration-container" stle="display: none;">
         <h1 class="page-title"></h1>
         <!-- Registration form -->
-        <form action="/register" method="POST">
+        <form action="/register" method="POST">Kfk
             <!-- User registration fields -->
             <input class="input-field" type="text" name="username" placeholder="Username" required>
             <input class="input-field" type="password" name="password" placeholder="Password" required>
@@ -88,7 +87,7 @@
               </div>
           </div>
           <div class="debt-savings">
-              <h2>Debt & Savings</h2>
+              <h2>Your Stats📊</h2>
               <div class="debt-input">
                   <label for="debt-amount">Current Debt Amount:</label>
                   <input type="number" name="debt-amount" id="debt-amount" placeholder="Enter Amount">
@@ -103,10 +102,11 @@
               <div class="goal-options">
                   <label for="goals">Select Your Financial Goals:</label>
                   <select name="goals" id="goals" multiple>
-                      <option value="buy-a-home">Buy a Home</option>
-                      <option value="retirement">Plan for Retirement</option>
-                      <option value="pay-debt">Pay Off Debt</option>
-                      <option value="travel">Travel the World</option>
+                      <option value="buy-a-home">Buy a Home🏡</option>
+                      <option value="retirement">Plan for Retirement👴🏾</option>
+                      <option value="pay-debt">Pay Off Debt💸</option>
+                      <option value="become a trillionaire">Become a Trillionaire💰</option>
+                      <option value="travel">Take over the fucking  World🌎</option>
                       <!-- Add more financial goals here -->
                   </select>
               </div>
@@ -129,36 +129,35 @@
   </div>
        
 
-    <!-- Personal Dashboard -->
-    <div class="container" id="dashboard-container" style="display: none;">
-        <h1 class="page-title">Welcome to Your MoneyBot Dashboard</h1>
-        <div class="dashboard-content">
-            <div class="dashboard-item">
-                <h2 class="dashboard-item-title">Financial Goals</h2>
-                <p class="dashboard-item-description">Set and track your financial goals with MoneyBot.</p>
-                <a href="#" class="dashboard-item-button" id="track-income-button">Set Goals</a>
-            </div>
-
-            <div class="dashboard-item">
-                <h2 class="dashboard-item-title">Income Tracker</h2>
-                <p class="dashboard-item-description">Track your income and expenses to stay on budget.</p>
-                <a href="#" class="dashboard-item-button">Track Income</a>
-            </div>
-
-            <div class="dashboard-item">
-                <h2 class="dashboard-item-title">Financial Education</h2>
-                <p class="dashboard-item-description">Access educational content to improve your financial knowledge.</p>
-                <a href="#" class="dashboard-item-button">Learn More</a>
-            </div>
-            <!-- Add more dashboard items as needed -->
+  <!-- Personal Dashboard -->
+  <div class="container" id="dashboard-container" style="display: none;">
+      <h1 class="page-title">Welcome to Your MoneyBot Dashboard</h1>
+      <div class="dashboard-content">
           <div class="dashboard-item">
-                <h2 class="dashboard-item-title">Streak🔥</h2>
-            <p class="dashboard-item-description">Take daily actions to get closer to your goals. </p>
-            <a href="#" class ="dashboard-item-button">Streak</a>
+              <h2 class="dashboard-item-title">Financial Goals🎯</h2>
+              <p class="dashboard-item-description">Set and track your financial goals with MoneyBot.</p>
+              <a href="#" class="dashboard-item-button" id="track-income-button">Set Goals</a>
           </div>
-        </div>
-    </div>
 
+          <div class="dashboard-item">
+              <h2 class="dashboard-item-title">Income Tracker📈</h2>
+              <p class="dashboard-item-description">Track your income and expenses to stay on budget.</p>
+              <a href="#" class="dashboard-item-button">Track Income</a>
+          </div>
+
+          <div class="dashboard-item">
+              <h2 class="dashboard-item-title">Financial Education📚</h2>
+              <p class="dashboard-item-description">Access educational content to improve your financial knowledge.</p>
+              <a href="#" class="dashboard-item-button">Learn More</a>
+          </div>
+
+          <div class="dashboard-item">
+              <h2 class="dashboard-item-title">Streak🔥</h2>
+              <p class="dashboard-item-description">Take daily actions to get closer to your goals.</p>
+              <a href="#" class="dashboard-item-button">Streak</a>
+          </div>
+      </div>
+  </div>
     <script src="script.js"></script>
 </body>
 </html>

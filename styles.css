@@ -239,3 +239,126 @@ header {
 .debt-savings label, .goal-options label {
     color: #ffffff; /* Text color */
 }
+/* Add this CSS to your styles.css or in a <style> tag in your HTML file */
+
+.dashboard-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px; /* Adjust the gap as needed for spacing between items */
+}
+
+.dashboard-item {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px #000000;
+    position: relative; /* Needed for the ::after pseudo-element */
+
+    /* Add the glowing effect */
+    transition: box-shadow 0.3s ease;
+}
+
+.dashboard-item:hover {
+    box-shadow: 0px 0px 20px 5px #00ff99; /* Adjust the glowing effect as needed */
+}
+
+.dashboard-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid #00ff99; /* Adjust border width and color as needed */
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.dashboard-item:hover::after {
+    opacity: 1;
+}
+/* Financial Background Page Styles */
+#financial-container {
+    display: none;
+    text-align: center;
+    padding: 20px;
+}
+
+#financial-container .page-title {
+    font-size: 28px;
+    color: #00ff99;
+}
+
+#financial-container h2 {
+    font-size: 24px;
+    color: #00ff99;
+    margin-top: 20px;
+}
+
+#financial-container .confidence-scale {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#financial-container input[type="range"] {
+    width: 80%;
+    margin: 10px;
+}
+
+#financial-container .confidence-value {
+    font-size: 20px;
+    color: #00ff99;
+}
+
+#financial-container .debt-input, #financial-container .savings-input {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+#financial-container label {
+    font-size: 18px;
+    color: #00ff99;
+    margin-top: 10px;
+}
+
+#financial-container input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+}
+
+#financial-container .goal-options {
+    margin: 20px;
+}
+
+#financial-container select {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    min-height: 200px; /* Adjust the height as needed */
+}
+
+#financial-container .animated-btn {
+    background-color: #00ff99;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+#financial-container .animated-btn:hover {
+    background-color: #00cc77;
+}
