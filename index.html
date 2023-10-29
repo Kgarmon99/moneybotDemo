@@ -79,38 +79,22 @@
       <!-- Financial information form -->
       <form action="/save-financial-info" method="POST">
           <!-- Gamified elements for financial information -->
-        <div class="financial-confidence">
-            <h2>Financial Confidence</h2>
-            <div class="confidence-scale">
-                <input type="range" name="confidence" id="confidence" min="0" max="10" step="2">
-                <p class="confidence-value" id="confidence-value">Average</p>
-            </div>
-        </div>
+          <div class="financial-confidence">
+              <h2>Financial Confidence</h2>
+              <div class="confidence-scale">
+                  <input type="range" name="confidence" id="confidence" min="0" max="5" step="1">
+                  <p class="confidence-value" id="confidence-value">Average</p>
+              </div>
+          </div>
           <div class="debt-savings">
               <h2>Your Stats📊</h2>
               <div class="debt-input">
-                  <label for="debt-amount">Current:</label>
+                  <label for="debt-amount">Current Debt:</label>
                   <input type="number" name="debt-amount" id="debt-amount" placeholder="Enter Amount">
               </div>
               <div class="savings-input">
-                  <label for="savings-amount">Current Savings:</label>
+                  <label for "savings-amount">Current Savings:</label>
                   <input type="number" name="savings-amount" id="savings-amount" placeholder="Enter Amount">
-              </div>
-          </div>
-          <div class="financial-goals">
-              <h2>Financial Goals</h2>
-              <div class="goal-options">
-                  <label for="goals">Select:</label>
-                  <select name="goals" id="goals" multiple>
-                      <option value="buy-a-home">Buy a Home🏡</option>
-                      <option value="Savings">Rainy Day Savings</option>
-                      <option value="retirement">Plan for Retirement👴🏾</option>
-                      <option value="pay-debt">Pay Off Debt💸</option>
-                      <option value="build-credit">Improve Credit💳</option>
-                      <option value="become a trillionaire">Become a Trillionaire💰</option>
-                      <option value="travel">Take over the fucking World🌎</option>
-                      <!-- Add more financial goals here -->
-                  </select>
               </div>
           </div>
           <!-- Next Button to Proceed -->
@@ -120,16 +104,39 @@
 
   <!-- Goal-Setting Page -->
   <div class="container" id="goal-container" style="display: none;">
-      <h1 class="page-title">Set Your Financial Goals</h1>
+      <h1 class="page-title">Goal-Setting Time</h1>
       <form id="goal-form">
+          <h2>Define Your Financial Goals</h2>
           <input class="input-field" type="text" id="goal-description" placeholder="Goal Description" required>
           <input class="input-field" type="number" id="goal-amount" placeholder="Goal Amount" required>
           <input class="input-field" type="date" id="goal-deadline" required>
+
+          <h2>Select Your Financial Goals</h2>
+          <div class="goal-options">
+              <label for="short-term-goal">Short-Term Goal:</label>
+              <select name="short-term-goal" id="short-term-goal">
+                  <option value="buy-a-home">Buy a Home🏡</option>
+                  <option value="rainy-day-savings">Rainy Day Savings💰</option>
+                  <option value="retirement-plan">Plan for Retirement👴🏾</option>
+                  <!-- Add more short-term goals here -->
+              </select>
+          </div>
+
+          <div class="goal-options">
+              <label for="long-term-goal">Long-Term Goal:</label>
+              <select name="long-term-goal" id="long-term-goal">
+                  <option value="pay-off-debt">Pay Off Debt💸</option>
+                  <option value="improve-credit">Improve Credit💳</option>
+                  <option value="become-a-trillionaire">Become a Trillionaire💰</option>
+                  <option value="world-domination">Take over the World🌎</option>
+                  <!-- Add more long-term goals here -->
+              </select>
+          </div>
+
           <button class="input-field animated-btn" id="add-goal" type="button">Add Goal</button>
-        <button class="input-field animated-btn" id="goal-next" type="button">Next</button>
+          <button class="input-field animated-btn" id="goal-next" type="button">Next</button>
       </form>
   </div>
-       
 
   <!-- Personal Dashboard -->
   <div class="container" id="dashboard-container" style="display: none;">

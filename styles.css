@@ -33,11 +33,25 @@ header {
     opacity: 0.9;
 }
 
+/* Updated logo styles for a cooler and more engaging effect */
 .logo {
     width: 120px;
     height: auto;
     margin-bottom: 20px;
-    animation: float 3s ease infinite;
+    animation: coolLogo 2s ease infinite alternate;
+    border-radius: 50%; /* Make the logo circular */
+}
+
+/* Define the "coolLogo" animation */
+@keyframes coolLogo {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 20px #00ff99, 0 0 40px #00ff99, 0 0 60px #00ff99;
+    }
+    100% {
+        transform: scale(1.05);
+        box-shadow: 0 0 20px #00ff99, 0 0 60px #00ff99, 0 0 100px #00ff99;
+    }
 }
 
 /* Additional styling for MoneyBot title */
@@ -366,4 +380,12 @@ header {
 
 .dashboard-item:hover::after {
     opacity: 1;
-}
+  /* Style for goal labels */
+  .goal-options label {
+      display: block;
+      font-size: 18px; /* Match the font size you use elsewhere */
+      color: #00ff99; /* Match the color theme in your app */
+      margin-top: 10px;
+      font-weight: bold; /* Adjust font weight as needed */
+      text-shadow: 0px 0px 10px #00ff99; /* Add any desired text shadow */
+  }

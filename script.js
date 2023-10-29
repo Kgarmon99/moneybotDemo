@@ -75,12 +75,33 @@ const confidenceSlider = document.getElementById('confidence');
 const confidenceValue = document.getElementById('confidence-value');
 
 // Define your confidence levels
-const confidenceLevels = ['Rookie', 'Average', 'Super Confident'];
+const confidenceLevels = ['Newbie👶🏾','Getting There📈', 'Average👌', 'Confident🫡', 'Super Confident🦸🏾‍♂️','Im Rich Bitch🤑'];
 
 // Add an event listener to the slider to update the displayed value
 confidenceSlider.addEventListener('input', function() {
     const sliderValue = parseInt(confidenceSlider.value);
     // Update the displayed value based on the slider value and confidence levels
     confidenceValue.textContent = confidenceLevels[sliderValue];
+
+  // Handle "Add Goal" button click to add selected goals to the list
+  const addGoalButton = document.getElementById('add-goal');
+  addGoalButton.addEventListener('click', function () {
+      const shortTermGoalSelect = document.getElementById('short-term-goal');
+      const longTermGoalSelect = document.getElementById('long-term-goal');
+      const goalDescription = document.getElementById('goal-description').value;
+      const goalAmount = document.getElementById('goal-amount').value;
+      const goalDeadline = document.getElementById('goal-deadline').value;
+
+      const selectedShortTermGoal = shortTermGoalSelect.options[shortTermGoalSelect.selectedIndex].text;
+      const selectedLongTermGoal = longTermGoalSelect.options[longTermGoalSelect.selectedIndex].text;
+
+      // You can add code to display or store these selected goals as needed
+      // For now, I'll just log them as an example
+      console.log('Goal Description:', goalDescription);
+      console.log('Goal Amount:', goalAmount);
+      console.log('Goal Deadline:', goalDeadline);
+      console.log('Short-Term Goal:', selectedShortTermGoal);
+      console.log('Long-Term Goal:', selectedLongTermGoal);
+  });
   
 });
