@@ -70,3 +70,17 @@ newDashboardItem.innerHTML = `
 dashboardContent.appendChild(newDashboardItem);
 
 // You can add more interactions and functionality for specific sections as needed
+// Get references to the HTML elements
+const confidenceSlider = document.getElementById('confidence');
+const confidenceValue = document.getElementById('confidence-value');
+
+// Define your confidence levels
+const confidenceLevels = ['Rookie', 'Average', 'Super Confident'];
+
+// Add an event listener to the slider to update the displayed value
+confidenceSlider.addEventListener('input', function() {
+    const sliderValue = parseInt(confidenceSlider.value);
+    // Update the displayed value based on the slider value and confidence levels
+    confidenceValue.textContent = confidenceLevels[sliderValue];
+  
+});

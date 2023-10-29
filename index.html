@@ -79,34 +79,36 @@
       <!-- Financial information form -->
       <form action="/save-financial-info" method="POST">
           <!-- Gamified elements for financial information -->
-          <div class="financial-confidence">
-              <h2>Financial Confidence</h2>
-              <div class="confidence-scale">
-                  <input type="range" name="confidence" id="confidence" min="0" max="10" step="1">
-                  <p class="confidence-value" id="confidence-value">5</p>
-              </div>
-          </div>
+        <div class="financial-confidence">
+            <h2>Financial Confidence</h2>
+            <div class="confidence-scale">
+                <input type="range" name="confidence" id="confidence" min="0" max="10" step="2">
+                <p class="confidence-value" id="confidence-value">Average</p>
+            </div>
+        </div>
           <div class="debt-savings">
               <h2>Your Stats📊</h2>
               <div class="debt-input">
-                  <label for="debt-amount">Current Debt Amount:</label>
+                  <label for="debt-amount">Current:</label>
                   <input type="number" name="debt-amount" id="debt-amount" placeholder="Enter Amount">
               </div>
               <div class="savings-input">
-                  <label for="savings-amount">Current Savings Amount:</label>
+                  <label for="savings-amount">Current Savings:</label>
                   <input type="number" name="savings-amount" id="savings-amount" placeholder="Enter Amount">
               </div>
           </div>
           <div class="financial-goals">
               <h2>Financial Goals</h2>
               <div class="goal-options">
-                  <label for="goals">Select Your Financial Goals:</label>
+                  <label for="goals">Select:</label>
                   <select name="goals" id="goals" multiple>
                       <option value="buy-a-home">Buy a Home🏡</option>
+                      <option value="Savings">Rainy Day Savings</option>
                       <option value="retirement">Plan for Retirement👴🏾</option>
                       <option value="pay-debt">Pay Off Debt💸</option>
+                      <option value="build-credit">Improve Credit💳</option>
                       <option value="become a trillionaire">Become a Trillionaire💰</option>
-                      <option value="travel">Take over the fucking  World🌎</option>
+                      <option value="travel">Take over the fucking World🌎</option>
                       <!-- Add more financial goals here -->
                   </select>
               </div>
