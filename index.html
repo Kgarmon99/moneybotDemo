@@ -151,44 +151,84 @@
       </form>
   </div>
 
- <!-- Personal Dashboard -->
-<!-- Dashboard Page -->
-<div class="container" id="dashboard-container" style="display: none;">
-    <h1 class="page-title">Your Custom Dashboard</h1>
+  <!-- Personal Dashboard -->
+  <!-- Dashboard Page -->
+  <div class="container" id="dashboard-container" style="display: none;">
+      <h1 class="page-title">Hello, Kahbron</h1>
 
-    <!-- User's Character Picture -->
-    <div class="user-profile">
-        <img src="BronAvatar.png" alt="User's Character">
-    </div>
+      <!-- User's Character Picture -->
+      <div class="user-profile">
+          <img src="BronAvatar.png" alt="Kahbron's Character">
+      </div>
 
-    <!-- Dashboard Content (Your existing content here) -->
-    <div class="dashboard-content">
-        <div class="dashboard-item">
-            <h2 class="dashboard-item-title">Financial Goals🎯</h2>
-            <p class="dashboard-item-description">Set and track your financial goals with MoneyBot.</p>
-            <a href="#" class="dashboard-item-button" id="track-income-button">Set Goals</a>
-        </div>
+      <!-- Profile Dashboard -->
+      <div class="dashboard-item profile-dashboard">
+          <div class="profile-info">
+              <h2 class="profile-name">KG's DashBoard</h2>
+              <div class="user-stats">
+                  <p><span class="xp">1,642</span> <img src="XP.png" alt="XP Icon"></p>
+                  <p><span class="streak">47 days </span> <img src="Fire Emoji.jpg" alt="Fire Icon"></p>
+                  <p><span class="health"> 12/47</span>
+<img src="HealthIcon.png"Health Icon"></p>
+              </div>
+          </div>
+          <div class="profile-buttons">
+              <a href="#" class="level-button">Level 2</a>
+              <a href="#" class="rank-button">Rank #192,743</a>
+          </div>
+      </div>
 
-        <div class="dashboard-item">
-            <h2 class="dashboard-item-title">Income Tracker📈</h2>
-            <p class "dashboard-item-description">Track your income and expenses to stay on budget.</p>
-            <a href="#" class="dashboard-item-button">Track Income</a>
-        </div>
+      <!-- Accounts Dashboard -->
+      <div class="dashboard-item accounts-dashboard">
+          <div class="savings-dropdown">
+              <select id="account-type">
+                  <option value="savings">Savings</option>
+                  <option value="checking">Checking</option>
+                  <option value="debts">Debts</option>
+              </select>
+              <p class="account-balance">19.4k in savings</p>
+          </div>
+          <div class="account-chart">
+              <table>
+                  <tr>
+                      <th>Account</th>
+                      <th>Total</th>
+                      <th>Last 30 days</th>
+                  </tr>
+                  <tr>
+                      <td>Grad School</td>
+                      <td>$6.1k</td>
+                      <td>-5%</td>
+                  </tr>
+                  <tr>
+                      <td>Rainy Day Fund</td>
+                      <td>$365</td>
+                      <td>+6%</td>
+                  </tr>
+                  <tr>
+                      <td>Dream Car</td>
+                      <td>$2.4k</td>
+                      <td>+8%</td>
+                  </tr>
+              </table>
+          </div>
+      </div>
 
-        <div class="dashboard-item">
-            <h2 class="dashboard-item-title">Financial Education📚</h2>
-            <p class="dashboard-item-description">Access educational content to improve your financial knowledge.</p>
-            <a href="#" class="dashboard-item-button">Learn More</a>
-        </div>
-
-        <div class="dashboard-item">
-            <h2 class="dashboard-item-title">Streak🔥</h2>
-            <p class="dashboard-item-description">Take daily actions to get closer to your goals.</p>
-            <a href="#" class="dashboard-item-button">Streak</a>
-        </div>
-    </div>
-</div>
-
+      <!-- My Goals Section -->
+      <div class="dashboard-item my-goals">
+          <h2 class="dashboard-item-title">My Goals</h2>
+          <div class="goal-container">
+              <p>Rainy Day Fund Progress circle = 73%</p>
+          </div>
+          <div class="goal-container">
+              <p>Pay off Credit Card Progress circle = 21%</p>
+          </div>
+          <div class="goal-container">
+              <p>Dream Car Progress circle = 5%</p>
+          </div>
+      </div>
+  </div>
+  
 <script src="script.js"></script>
 </body>
 </html>
