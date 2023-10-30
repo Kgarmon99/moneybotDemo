@@ -14,7 +14,7 @@
 
     <!-- Registration Page -->
     <div class="container" id="registration-container" stle="display: none;">
-        <h1 class="page-title"></h1>
+        <h1 class="page-title">LET'S GOOOO!🚀</h1>
         <!-- Registration form -->
         <form action="/register" method="POST">Kfk
             <!-- User registration fields -->
@@ -75,62 +75,75 @@
 
   <!-- Financial Background Page -->
   <div class="container" id="financial-container" style="display: none;">
-      <h1 class="page-title">Discover Your Financial Path</h1>
+      <h1 class="page-title">Embark on Your Financial Journey</h1>
       <!-- Financial information form -->
       <form action="/save-financial-info" method="POST">
           <!-- Gamified elements for financial information -->
           <div class="financial-confidence">
-              <h2>Financial Confidence</h2>
+              <h2>Your Financial Confidence Adventure</h2>
+              <label for="confidence">Rate Your Confidence:</label>
               <div class="confidence-scale">
                   <input type="range" name="confidence" id="confidence" min="0" max="5" step="1">
                   <p class="confidence-value" id="confidence-value">Average</p>
               </div>
+              <p class="confidence-description">How confident do you feel about your financial journey? Adjust the slider to reveal your current level of financial courage.</p>
           </div>
           <div class="debt-savings">
-              <h2>Your Stats📊</h2>
+              <h2>Your Financial Stats</h2>
               <div class="debt-input">
                   <label for="debt-amount">Current Debt:</label>
                   <input type="number" name="debt-amount" id="debt-amount" placeholder="Enter Amount">
               </div>
               <div class="savings-input">
-                  <label for "savings-amount">Current Savings:</label>
+                  <label for="savings-amount">Current Savings:</label>
                   <input type="number" name="savings-amount" id="savings-amount" placeholder="Enter Amount">
               </div>
           </div>
           <!-- Next Button to Proceed -->
-          <button class="input-field animated-btn" id="financial-next" type="button">Next</button>
+          <button class="input-field animated-btn" id="financial-next" type="button">Begin Your Journey</button>
       </form>
   </div>
-
   <!-- Goal-Setting Page -->
   <div class="container" id="goal-container" style="display: none;">
-      <h1 class="page-title">Goal-Setting Time</h1>
+      <h1 class="page-title">Define Your Financial Goals</h1>
       <form id="goal-form">
-          <h2>Define Your Financial Goals</h2>
-          <input class="input-field" type="text" id="goal-description" placeholder="Goal Description" required>
-          <input class="input-field" type="number" id="goal-amount" placeholder="Goal Amount" required>
-          <input class="input-field" type="date" id="goal-deadline" required>
 
-          <h2>Select Your Financial Goals</h2>
+          <h2>Select Your Goals</h2>
           <div class="goal-options">
-              <label for="short-term-goal">Short-Term Goal:</label>
-              <select name="short-term-goal" id="short-term-goal">
-                  <option value="buy-a-home">Buy a Home🏡</option>
-                  <option value="rainy-day-savings">Rainy Day Savings💰</option>
-                  <option value="retirement-plan">Plan for Retirement👴🏾</option>
-                  <!-- Add more short-term goals here -->
-              </select>
+              <div class="short-term-goal">
+                  <label for="short-term-goal">Short-Term Goal:</label>
+                  <select name="short-term-goal" id="short-term-goal">
+                      <option value="buy-a-home">Buy a Home🏡</option>
+                      <option value="rainy-day-savings">Rainy Day Savings💰</option>
+                      <option value="retirement-plan">Plan for Retirement👴🏾</option>
+                      <!-- Add more short-term goals here -->
+                  </select>
+              </div>
+              <div class="long-term-goal">
+                  <label for="long-term-goal">Long-Term Goal:</label>
+                  <select name="long-term-goal" id="long-term-goal">
+                      <option value="pay-off-debt">Pay Off Debt💸</option>
+                      <option value="improve-credit">Improve Credit💳</option>
+                      <option value="become-a-trillionaire">Become a Trillionaire💰</option>
+                      <option value="world-domination">Take over the World🌎</option>
+                      <!-- Add more long-term goals here -->
+                  </select>
+              </div>
           </div>
 
-          <div class="goal-options">
-              <label for="long-term-goal">Long-Term Goal:</label>
-              <select name="long-term-goal" id="long-term-goal">
-                  <option value="pay-off-debt">Pay Off Debt💸</option>
-                  <option value="improve-credit">Improve Credit💳</option>
-                  <option value="become-a-trillionaire">Become a Trillionaire💰</option>
-                  <option value="world-domination">Take over the World🌎</option>
-                  <!-- Add more long-term goals here -->
-              </select>
+          <div class="goal-info">
+              <h2>Create Your Own Goal</h2>
+              <input class="input-field" type="text" id="goal-description" placeholder="Enter Your Custom Goal Description" required>
+          </div>
+
+          <div class="goal-info">
+              <h2>How Much Will It Cost?</h2>
+              <input class="input-field" type="number" id="goal-amount" placeholder="Enter Goal Amount" required>
+          </div>
+
+          <div class="goal-info">
+              <h2>When's Your Deadline?</h2>
+              <input class="input-field" type="date" id="goal-deadline" required>
           </div>
 
           <button class="input-field animated-btn" id="add-goal" type="button">Add Goal</button>
@@ -138,35 +151,44 @@
       </form>
   </div>
 
-  <!-- Personal Dashboard -->
-  <div class="container" id="dashboard-container" style="display: none;">
-      <h1 class="page-title">Welcome to Your MoneyBot Dashboard</h1>
-      <div class="dashboard-content">
-          <div class="dashboard-item">
-              <h2 class="dashboard-item-title">Financial Goals🎯</h2>
-              <p class="dashboard-item-description">Set and track your financial goals with MoneyBot.</p>
-              <a href="#" class="dashboard-item-button" id="track-income-button">Set Goals</a>
-          </div>
+ <!-- Personal Dashboard -->
+<!-- Dashboard Page -->
+<div class="container" id="dashboard-container" style="display: none;">
+    <h1 class="page-title">Your Custom Dashboard</h1>
 
-          <div class="dashboard-item">
-              <h2 class="dashboard-item-title">Income Tracker📈</h2>
-              <p class="dashboard-item-description">Track your income and expenses to stay on budget.</p>
-              <a href="#" class="dashboard-item-button">Track Income</a>
-          </div>
+    <!-- User's Character Picture -->
+    <div class="user-profile">
+        <img src="BronAvatar.png" alt="User's Character">
+    </div>
 
-          <div class="dashboard-item">
-              <h2 class="dashboard-item-title">Financial Education📚</h2>
-              <p class="dashboard-item-description">Access educational content to improve your financial knowledge.</p>
-              <a href="#" class="dashboard-item-button">Learn More</a>
-          </div>
+    <!-- Dashboard Content (Your existing content here) -->
+    <div class="dashboard-content">
+        <div class="dashboard-item">
+            <h2 class="dashboard-item-title">Financial Goals🎯</h2>
+            <p class="dashboard-item-description">Set and track your financial goals with MoneyBot.</p>
+            <a href="#" class="dashboard-item-button" id="track-income-button">Set Goals</a>
+        </div>
 
-          <div class="dashboard-item">
-              <h2 class="dashboard-item-title">Streak🔥</h2>
-              <p class="dashboard-item-description">Take daily actions to get closer to your goals.</p>
-              <a href="#" class="dashboard-item-button">Streak</a>
-          </div>
-      </div>
-  </div>
-    <script src="script.js"></script>
+        <div class="dashboard-item">
+            <h2 class="dashboard-item-title">Income Tracker📈</h2>
+            <p class "dashboard-item-description">Track your income and expenses to stay on budget.</p>
+            <a href="#" class="dashboard-item-button">Track Income</a>
+        </div>
+
+        <div class="dashboard-item">
+            <h2 class="dashboard-item-title">Financial Education📚</h2>
+            <p class="dashboard-item-description">Access educational content to improve your financial knowledge.</p>
+            <a href="#" class="dashboard-item-button">Learn More</a>
+        </div>
+
+        <div class="dashboard-item">
+            <h2 class="dashboard-item-title">Streak🔥</h2>
+            <p class="dashboard-item-description">Take daily actions to get closer to your goals.</p>
+            <a href="#" class="dashboard-item-button">Streak</a>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>

@@ -1,243 +1,192 @@
-/* Base styling */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: black;
-    display: flex;
-    flex-direction: column; /* Added to stack content vertically */
-    align-items: center;
-    height: 100vh;
-}
+  /* Base styling */
+  body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: black;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100vh;
+  }
 
-header {
-    display: flex;
-    flex-direction: column; /* Added to stack logo and title vertically */
-    align-items: center;
-}
+  header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
 
-.container {
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 30px;
-    border-radius: 10px;
-    width: 400px;
-    box-shadow: 0px 0px 10px 0px #000000;
-    transform: translateY(0);
-    opacity: 1;
-    transition: transform 0.5s ease, opacity 0.5s ease;
-}
+  .container {
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 30px;
+      border-radius: 10px;
+      width: 400px;
+      box-shadow: 0px 0px 10px 0px #00ff99;
+      transform: translateY(0);
+      opacity: 1;
+      transition: transform 0.5s ease, opacity 0.5s ease;
+  }
 
-.container:hover {
-    transform: translateY(-10px);
-    opacity: 0.9;
-}
+  .container:hover {
+      transform: translateY(-10px);
+      opacity: 0.9;
+  }
 
-/* Updated logo styles for a cooler and more engaging effect */
-.logo {
-    width: 120px;
-    height: auto;
-    margin-bottom: 20px;
-    animation: coolLogo 2s ease infinite alternate;
-    border-radius: 50%; /* Make the logo circular */
-}
+  /* Logo styling */
+  .logo {
+      width: 120px;
+      height: auto;
+      margin-bottom: 20px;
+      animation: coolLogo 2s ease infinite alternate;
+      border-radius: 50%;
+  }
 
-/* Define the "coolLogo" animation */
-@keyframes coolLogo {
-    0% {
-        transform: scale(1);
-        box-shadow: 0 0 20px #00ff99, 0 0 40px #00ff99, 0 0 60px #00ff99;
-    }
-    100% {
-        transform: scale(1.05);
-        box-shadow: 0 0 20px #00ff99, 0 0 60px #00ff99, 0 0 100px #00ff99;
-    }
-}
+  @keyframes coolLogo {
+      0% {
+          transform: scale(1);
+          box-shadow: 0 0 20px #00ff99, 0 0 40px #00ff99, 0 0 60px #00ff99;
+      }
+      100% {
+          transform: scale(1.05);
+          box-shadow: 0 0 20px #00ff99, 0 0 60px #00ff99, 0 0 100px #00ff99;
+      }
+  }
 
-/* Additional styling for MoneyBot title */
-.app-title {
-    color: #00ff99;
-    font-size: 24px;
-    margin-top: 10px;
-}
+  /* Title styling */
+  .app-title,
+  .page-title {
+      color: #00ff99;
+      font-size: 24px;
+      margin-top: 10px;
+      animation: heartbeat 1.5s infinite;
+  }
 
-.page-title {
-    color: #00ff99;
-    margin-bottom: 20px;
-    font-size: 24px;
-    animation: heartbeat 1.5s infinite;
-}
+  @keyframes heartbeat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+  }
 
-@keyframes heartbeat {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-}
+  /* Button styling */
+  .animated-btn {
+      background-color: #00ff99;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+  }
 
-.animated-btn {
-    background-color: #00ff99;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
+  .animated-btn:hover {
+      background-color: #00cc77;
+      transform: scale(1.05);
+  }
 
-.animated-btn:hover {
-    background-color: #00cc77;
-    transform: scale(1.05);
-}
+  /* Input field styling */
+  .input-field,
+  .select-field {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      background-color: rgba(0, 0, 0, 0.4);
+      color: white;
+  }
 
-.input-field {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    background-color: rgba(0, 0, 0, 0.4);
-    color: white;
-}
+  .input-field::placeholder {
+      color: #ccc;
+  }
 
-.input-field::placeholder {
-    color: #ccc;
-}
+  .input-field:focus {
+      outline: none;
+      box-shadow: 0px 0px 5px #00ff99;
+  }
 
-.input-field:focus {
-    outline: none;
-    box-shadow: 0px 0px 5px #00ff99;
-}
+  /* Confidence scale styling */
+  #confidence {
+      width: 80%;
+      margin: 10px;
+      background-color: black;
+      color: #00ff99;
+  }
 
-.select-field {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    background-color: rgba(0, 0, 0, 0.4);
-    color: white;
-    outline: none;
-}
-/* Financial Background Page Styles */
-#financial-container {
-    display: none;
-    text-align: center;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.6);
-    border-radius: 10px;
-    width: 400px;
-    box-shadow: 0px 0px 10px 0px #00ff99;
-    transform: translateY(0);
-    opacity: 1;
-    transition: transform 0.5s ease, opacity 0.5s ease;
-}
+  .confidence-value {
+      font-size: 20px;
+      color: #00ff99;
+      text-shadow: 0px 0px 10px #00ff99;
+  }
 
-#financial-container .page-title {
-    font-size: 28px;
-    color: #00ff99;
-    margin-bottom: 20px;
-    font-weight: bold;
-    text-shadow: 0px 0px 10px #00ff99; /* Add green text glow */
-}
+  /* Debt and savings input styling */
+  .debt-input input[type="number"],
+  .savings-input input[type="number"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 2px solid #00ff99;
+      border-radius: 5px;
+      background-color: black;
+      color: white;
+  }
 
-#financial-container h2 {
-    font-size: 24px;
-    color: #00ff99;
-    margin-top: 20px;
-    text-shadow: 0px 0px 10px #00ff99; /* Add green text glow */
-}
+  /* Label styling */
+  label {
+      font-size: 18px;
+      color: #00ff99;
+      margin-top: 10px;
+      text-shadow: 0px 0px 10px #00ff99;
+  }
 
-#financial-container .confidence-scale {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid #00ff99; /* Add a green border to the confidence scale */
-    border-radius: 5px;
-    background-color: black; /* Set the background color to black */
-    margin: 20px;
-}
+  /* Select field styling */
+  select {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: black;
+      color: #00ff99;
+      min-height: 200px;
+      text-shadow: 0px 0px 10px #00ff99;
+  }
 
-#financial-container input[type="range"] {
-    width: 80%;
-    margin: 10px;
-    background-color: black; /* Set the background color to black */
-    color: #00ff99;
-}
-
-#financial-container .confidence-value {
-    font-size: 20px;
-    color: #00ff99;
-    text-shadow: 0px 0px 10px #00ff99; /* Add green text glow */
-}
-
-#financial-container .debt-input input[type="number"],
-#financial-container .savings-input input[type="number"] {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 2px solid #00ff99; /* Add a green border */
-    border-radius: 5px;
-    background-color: black; /* Set the background color to black */
-    color: white;
-}
-
-#financial-container label {
-    font-size: 18px;
-    color: #00ff99;
-    margin-top: 10px;
-    text-shadow: 0px 0px 10px #00ff99; /* Add green text glow */
-}
-
-#financial-container .goal-options {
-    margin: 20px;
-}
-
-#financial-container select {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: black; /* Set the background color to black */
-    color: #00ff99;
-    min-height: 200px;
-    text-shadow: 0px 0px 10px #00ff99; /* Add green text glow */
-}
-
-#financial-container .animated-btn {
-    background-color: #00ff99;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-top: 20px;
-}
-
-#financial-container .animated-btn:hover {
-    background-color: #00cc77;
-    text-shadow: 0px 0px 10px #00ff99; /* Add green text glow */
-}
-}
-/* Dashboard styling */
 .dashboard-content {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
 }
 
 .dashboard-item {
     background-color: rgba(0, 0, 0, 0.6);
     padding: 20px;
     border-radius: 10px;
-    width: 250px;
     box-shadow: 0px 0px 10px 0px #00ff99;
-    margin: 10px;
+    position: relative;
+    transition: box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.dashboard-item:hover {
+    box-shadow: 0px 0px 20px 5px #00ff99;
+}
+
+.dashboard-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid #00ff99;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.dashboard-item:hover::after {
+    opacity: 1;
 }
 
 .dashboard-item-title {
@@ -269,123 +218,22 @@ header {
     transform: scale(1.05);
 }
 
-/* Goal-Setting Page styling */
-#goal-container {
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 30px;
-    border-radius: 10px;
-    width: 400px;
-    box-shadow: 0px 0px 10px 0px #00ff99;
-    transform: translateY(0);
-    opacity: 1;
-    transition: transform 0.5s ease, opacity 0.5s ease;
-    display: none;
-}
-
-#goal-container:hover {
-    transform: translateY(-10px);
-    opacity: 0.9;
-}
-
-#goal-container .page-title {
+/* Style for goal labels */
+.goal-options label {
+    display: block;
+    font-size: 18px;
     color: #00ff99;
+    margin-top: 10px;
+    font-weight: bold;
+    text-shadow: 0px 0px 10px #00ff99;
+}
+.user-profile {
+    text-align: center;
     margin-bottom: 20px;
-    font-size: 24px;
-    animation: heartbeat 1.5s infinite;
 }
 
-#goal-container .animated-btn {
-    background-color: #00ff99;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+.user-profile img {
+    width: 100px; /* Adjust the width as needed */
+    height: 100px; /* Adjust the height as needed */
+    border-radius: 50%; /* Make the picture circular */
 }
-
-#goal-container .animated-btn:hover {
-    background-color: #00cc77;
-    transform: scale(1.05);
-}
-
-#goal-container .input-field {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    background-color: rgba(0, 0, 0, 0.4);
-    color: white;
-}
-
-#goal-container .input-field::placeholder {
-    color: #ccc;
-}
-
-#goal-container .input-field:focus {
-    outline: none;
-    box-shadow: 0px 0px 5px #00ff99;
-}
-
-#goal-container .select-field {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    background-color: rgba(0, 0, 0, 0.4);
-    color: white;
-    outline: none;
-}
-
-
-.dashboard-content {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px; /* Adjust the gap as needed for spacing between items */
-}
-
-.dashboard-item {
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px 0px #000000;
-    position: relative; /* Needed for the ::after pseudo-element */
-
-    /* Add the glowing effect */
-    transition: box-shadow 0.3s ease;
-}
-
-.dashboard-item:hover {
-    box-shadow: 0px 0px 20px 5px #00ff99; /* Adjust the glowing effect as needed */
-}
-
-.dashboard-item::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border: 2px solid #00ff99; /* Adjust border width and color as needed */
-    border-radius: 10px;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.dashboard-item:hover::after {
-    opacity: 1;
-  /* Style for goal labels */
-  .goal-options label {
-      display: block;
-      font-size: 18px; /* Match the font size you use elsewhere */
-      color: #00ff99; /* Match the color theme in your app */
-      margin-top: 10px;
-      font-weight: bold; /* Adjust font weight as needed */
-      text-shadow: 0px 0px 10px #00ff99; /* Add any desired text shadow */
-  }
