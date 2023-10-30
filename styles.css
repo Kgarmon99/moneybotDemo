@@ -263,66 +263,87 @@ body {
     margin-bottom: 20px;
 }
 
-.user-profile img {
-    width: 100px; /* Adjust the width as needed */
-    height: 100px; /* Adjust the height as needed */
+.profile-picture img {
+      height:200px !important;
+    width: auto; /* Adjust the width as needed */
     border-radius: 50%; /* Make the picture circular */
 }
 
-/* Profile Dashboard */
-.profile-dashboard {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.6);
-    border-radius: 10px;
-    margin: 20px 0;
-    box-shadow: 0px 0px 10px 0px #00ff99;
-}
+  /* Profile Dashboard */
+  .profile-dashboard {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.6);
+      border-radius: 10px;
+      margin: 20px 0;
+      box-shadow: 0px 0px 10px 0px #00ff99;
+  }
 
-.profile-info {
-    width: 70%;
-}
+  .profile-info {
+      width: 70%;
+      text-align: left;
+  }
 
-.profile-name {
-    color: #00ff99;
-    font-size: 24px;
-}
+  .profile-name {
+      color: #00ff99;
+      font-size: 24px;
+      margin: 10px 0;
+  }
 
-.user-stats p {
-    color: white;
-    font-size: 16px;
-}
+  .user-stats p {
+      color: white;
+      font-size: 16px;
+      margin: 5px 0;
+  }
 
-.user-stats p img {
-    width: 20px; /* Adjust the width as needed */
-    height: 20px; /* Adjust the height as needed */
-    margin-left: 5px;
-}
+  .user-stats p img {
+      width: 20px; /* Adjust the width as needed */
+      height: 20px; /* Adjust the height as needed */
+      margin-left: 5px;
+  }
 
-.profile-buttons a {
-    background-color: #00ff99;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none;
-    display: inline-block;
-    margin: 5px;
-}
+  .profile-buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: 10px;
+  }
 
-.profile-buttons a:hover {
-    background-color: #00cc77;
-}
+  .profile-buttons a {
+      background-color: black;
+      color: #00ff99;
+      border: 2px solid #00ff99;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      margin: 5px;
+      transition: background-color 0.3s, border-color 0.3s;
+  }
 
-/* Accounts Dashboard */
+  .profile-buttons a:hover {
+      background-color: #00cc77;
+      border-color: #00cc77;
+  }
+
+  .profile-picture {
+      width: 30%; /* Adjust the width as needed */
+      text-align: right;
+  }
+
+  .profile-picture img {
+      width: 100%; /* Ensure the image takes up the entire container */
+      border-radius: 10px; /* Add a border radius for a circular effect */
+  }
+}
+/* Accounts Dashboard - Half Height with Font Adjustments */
 .accounts-dashboard {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px;
+    padding: 10px; /* Reduce the vertical padding to cut the height in half */
     background-color: rgba(0, 0, 0, 0.6);
     border-radius: 10px;
     margin: 20px 0;
@@ -330,7 +351,7 @@ body {
 }
 
 .savings-dropdown select {
-    width: 70%;
+    width: 100%;
     padding: 10px;
     border: none;
     border-radius: 5px;
@@ -342,11 +363,11 @@ body {
 
 .account-balance {
     color: #00ff99;
-    font-size: 16px;
+    font-size: 12px; /* Reduce font size */
 }
 
 .account-chart table {
-    width: 30%;
+    width: 100%;
 }
 
 .account-chart th, .account-chart td {
@@ -369,6 +390,9 @@ body {
     border-radius: 10px;
     margin: 20px 0;
     box-shadow: 0px 0px 10px 0px #00ff99;
+    display: flex;
+    flex-direction: row; /* Display containers side by side */
+    justify-content: space-between; /* Add space between containers */
 }
 
 .my-goals h2 {
@@ -384,6 +408,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 30%; /* Set a width for each container */
 }
 
 .goal-container p {
@@ -438,4 +463,50 @@ a.dashboard-item-button:hover {
 .level-button:hover, .rank-button:hover {
     background-color: #00ff99;
     color: black;
+}
+/* My Goals Section */
+.my-goals {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0px 0px 10px 0px #00ff99;
+    display: flex;
+    flex-direction: row; /* Display containers side by side */
+    justify-content: space-between; /* Add space between containers */
+}
+
+.my-goals h2 {
+    color: #00ff99;
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.goal-container {
+    color: white;
+    font-size: 16px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 30%; /* Set a width for each container */
+    border: 2px solid #00ff99; /* Add a green border */
+    border-radius: 10px; /* Add border radius */
+    padding: 10px; /* Add padding */
+}
+
+.goal-container p {
+    width: 70%;
+}
+
+.goal-container .progress-circle {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #00ff99;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #00ff99;
+    text-shadow: 0px 0px 10px #00ff99;
 }
