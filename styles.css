@@ -337,22 +337,22 @@ body {
       width: 100%; /* Ensure the image takes up the entire container */
       border-radius: 10px; /* Add a border radius for a circular effect */
   }
-}
+
 /* Accounts Dashboard - Half Height with Font Adjustments */
 .accounts-dashboard {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px; /* Reduce the vertical padding to cut the height in half */
+    padding: 2.5px; /* Reduce the vertical padding to cut the height in half */
     background-color: rgba(0, 0, 0, 0.6);
-    border-radius: 10px;
-    margin: 20px 0;
+    border-radius: 2.5px;
+    margin: 5px 0;
     box-shadow: 0px 0px 10px 0px #00ff99;
 }
 
 .savings-dropdown select {
     width: 100%;
-    padding: 10px;
+    padding: 5px;
     border: none;
     border-radius: 5px;
     background-color: black;
@@ -472,8 +472,10 @@ a.dashboard-item-button:hover {
     margin: 20px 0;
     box-shadow: 0px 0px 10px 0px #00ff99;
     display: flex;
-    flex-direction: row; /* Display containers side by side */
-    justify-content: space-between; /* Add space between containers */
+    flex-direction: row; /* Display containers vertically */
+    align-items: center; /* Center content horizontally */
+    width: 100%; /* Take the full width */
+    text-align: center; /* Center the text */
 }
 
 .my-goals h2 {
@@ -482,24 +484,41 @@ a.dashboard-item-button:hover {
     margin: 10px 0;
 }
 
+.goal-containers {
+    display: flex;
+    flex-direction: row; /* Display containers side by side */
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap; /* Allow containers to wrap when the screen is narrow */
+}
+
 .goal-container {
     color: white;
-    font-size: 16px;
-    margin: 10px 0;
+    font-size: 16px; /* Increase font size for better readability */
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: row; /* Display content vertically */
+    align-items: center; /* Center content horizontally */
     width: 30%; /* Set a width for each container */
     border: 2px solid #00ff99; /* Add a green border */
     border-radius: 10px; /* Add border radius */
     padding: 10px; /* Add padding */
+    text-align: center; /* Center the text */
+    margin: 10px; /* Add margin for spacing */
 }
 
 .goal-container p {
-    width: 70%;
+    width: 100%; /* Take the full width */
+    margin: 10px 0;
 }
 
-.goal-container .progress-circle {
+.progress-bar-container {
+    display: flex;
+    flex-direction: row; /* Display progress bars side by side */
+    justify-content: space-between; /* Distribute progress bars in a row */
+    width: 100%;
+}
+
+.progress-circle {
     width: 40px;
     height: 40px;
     border: 2px solid #00ff99;
@@ -509,4 +528,54 @@ a.dashboard-item-button:hover {
     align-items: center;
     color: #00ff99;
     text-shadow: 0px 0px 10px #00ff99;
+    margin: 10px 0; /* Add margin for spacing */
+}
+/* Add this CSS to your stylesheet */
+.bottom-navigation {
+    background-image: url('index.html'); /* Replace 'new-background-image.jpg' with your desired background image */
+    background-repeat: no-repeat;
+    background-size: cover; /* Cover the entire width and height */
+    height: 50px; /* Set the height to your preferred value (e.g., 50px) */
+    width: 100%; /* Set the width to span the entire screen width */
+    position: fixed; /* Fix it to the bottom of the screen */
+    bottom: 0; /* Stick it to the bottom of the screen */
+    display: flex; /* Use flexbox for item alignment */
+    justify-content: space-around; /* Distribute items evenly */
+    align-items: center; /* Vertically center items */
+}
+
+.bottom-navigation ul {
+    list-style: none;
+    padding: 0;
+}
+
+.bottom-navigation li {
+    display: inline-block;
+    margin: 0; /* Remove the margin between items */
+    width: 40px; /* Set the width of the icons */
+    height: 40px; /* Set the height of the icons */
+    background-position: center center; /* Center the background image */
+    background-size: cover; /* Make sure the icons fit the space */
+}
+
+/* Define the background position for each navigation item */
+.bottom-navigation li:nth-child(1) a {
+    background-image: url('home-icon.png'); /* Home icon image */
+}
+.bottom-navigation li:nth-child(2) a {
+    background-image: url('progress-icon.png'); /* Progress icon image */
+}
+.bottom-navigation li:nth-child(3) a {
+    background-image: url('roadmap-icon.png'); /* Roadmap icon image */
+}
+.bottom-navigation li:nth-child(4) a {
+    background-image: url('achievements-icon.png'); /* Achievements icon image */
+}
+.bottom-navigation li:nth-child(5) a {
+    background-image: url('moneybot-icon.png'); /* MoneyBot icon image */
+}
+
+/* Hover styles for links */
+.bottom-navigation li a:hover {
+    text-decoration: underline;
 }

@@ -18,7 +18,7 @@
         <!-- Registration form -->
         <form action="/register" method="POST">Kfk
             <!-- User registration fields -->
-            <input class="input-field" type="text" name="username" placeholder="Username" required>
+            <input class="input-field" type="text" name="username" placeholder="Gamertag" required>
             <input class="input-field" type="password" name="password" placeholder="Password" required>
             <button class="input-field animated-btn" id="registration-next" type="button">Next</button>
           
@@ -41,13 +41,13 @@
           </select>
           <!-- Add more avatar customization options here -->
           <label for="avatar-name">Avatar Name:</label>
-          <input class="input-field" type="text" name="avatar-name" id="avatar-name" placeholder="Avatar Name" required>
+          <input class="input-field" type="text" name="avatar-name" id="avatar-name" placeholder="Enter Name" required>
 
           <label for="avatar-age">Avatar Age:</label>
-          <input class="input-field" type="number" name="avatar-age" id="avatar-age" placeholder="Avatar Age" required>
+          <input class="input-field" type="number" name="avatar-age" id="avatar-age" placeholder="Enter Age" required>
 
           <label for="avatar-hometown">Avatar Hometown:</label>
-          <input class="input-field" type="text" name="avatar-hometown" id="avatar-hometown" placeholder="Avatar Hometown" required>
+          <input class="input-field" type="text" name="avatar-hometown" id="avatar-hometown" placeholder="Enter Hometown" required>
           <!-- End of Name, Age, Hometown fields -->
           <button class="input-field animated-btn" id="avatar-next" type="button">Next</button>
       </div>
@@ -221,22 +221,34 @@
         <!-- ... (your existing code) ... -->
 
         <!-- My Goals Section -->
-        <div class="my-goals">
-            <h2 class="dashboard-item-title">My Goals</h2>
-            <div class="goal-container">
-                <p>Rainy Day Fund</p>
-                <div class="progress-circle">73%</div>
-            </div>
-            <div class="goal-container">
-                <p>Pay off Credit Card</p>
-                <div class="progress-circle">21%</div>
-            </div>
-            <div class="goal-container">
-                <p>Dream Car</p>
-                <div class="progress-circle">5%</div>
-            </div>
+    <div class="my-goals">
+        <div class="goal-container">
+            <div class="progress-circle">73%</div>
+            <p>Rainy Day Fund</p>
+        </div>
+        <div class="goal-container">
+            <div class="progress-circle">21%</div>
+            <p>Pay off Credit Card</p>
+        </div>
+        <div class="goal-container">
+            <div class="progress-circle">5%</div>
+            <p>Dream Car</p>
         </div>
     </div>
+
+<!-- Navigation Bar Container -->
+<div class="bottom-navigation-container">
+    <div class="bottom-navigation">
+        <ul>
+            <li><a href="#home"></a></li>
+            <li><a href="#progress"></a></li>
+            <li><a href="#roadmap"></a></li>
+            <li><a href="#achievements"></a></li>
+            <li><a href="#moneybot"></a></li>
+        </ul>
+    </div>
+</div>
+
 <script src="script.js"></script>
 </body>
 </html>
