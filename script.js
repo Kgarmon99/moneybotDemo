@@ -36,7 +36,6 @@ goalSettingNextBtn.addEventListener('click', function() {
 const goalForm = document.getElementById('goal-form');
 goalForm.addEventListener('submit', function(event) {
     event.preventDefault();
-  
     // Process the goal-setting data here
     // You can add code to send this data to your server or perform other actions
     const goalDescription = document.getElementById('goal-description').value;
@@ -70,7 +69,19 @@ newDashboardItem.innerHTML = `
 // Append the new item to the dashboard
 dashboardContent.appendChild(newDashboardItem);
 
+// You can add more interactions and functionality for specific sections as needed
+// Get references to the HTML elements
+const confidenceSlider = document.getElementById('confidence');
+const confidenceValue = document.getElementById('confidence-value');
 
+// Define your confidence levels
+const confidenceLevels = ['Newbie👶🏾','Getting There📈', 'Average👌', 'Confident🫡', 'Super Confident🦸🏾‍♂️','Im Rich Bitch🤑'];
+
+// Add an event listener to the slider to update the displayed value
+confidenceSlider.addEventListener('input', function() {
+    const sliderValue = parseInt(confidenceSlider.value);
+    // Update the displayed value based on the slider value and confidence levels
+    confidenceValue.textContent = confidenceLevels[sliderValue];
 
   // Handle "Add Goal" button click to add selected goals to the list
   const addGoalButton = document.getElementById('add-goal');

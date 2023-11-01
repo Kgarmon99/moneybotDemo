@@ -78,29 +78,27 @@
       <h1 class="page-title">Embark on Your Financial Journey</h1>
       <!-- Financial information form -->
       <form action="/save-financial-info" method="POST">
-        <!-- Gamified elements for financial information -->
-        <div class="financial-info">
-            <div class="financial-confidence">
-                <h2>Your Financial Confidence Adventure</h2>
-                <label for="confidence">Rate Your Confidence:</label>
-                <div class="confidence-scale">
-                    <input type="range" name="confidence" id="confidence" min="0" max="5" step="1">
-                    <p class="confidence-value" id="confidence-value">Average</p>
-                </div>
-                <p class="confidence-description">How confident do you feel about your financial journey? Adjust the slider to reveal your current level of financial courage.</p>
-            </div>
-            <div class="financial-stats">
-                <h2>Your Financial Stats</h2>
-                <div class="debt-input">
-                    <label for="debt-amount">Current Debt:</label>
-                    <input type="number" name="debt-amount" id="debt-amount" placeholder="Enter Amount">
-                </div>
-                <div class="savings-input">
-                    <label for="savings-amount">Current Savings:</label>
-                    <input type="number" name="savings-amount" id="savings-amount" placeholder="Enter Amount">
-                </div>
-            </div>
-        </div>
+          <!-- Gamified elements for financial information -->
+          <div class="financial-confidence">
+              <h2>Your Financial Confidence Adventure</h2>
+              <label for="confidence">Rate Your Confidence:</label>
+              <div class="confidence-scale">
+                  <input type="range" name="confidence" id="confidence" min="0" max="5" step="1">
+                  <p class="confidence-value" id="confidence-value">Average</p>
+              </div>
+              <p class="confidence-description">How confident do you feel about your financial journey? Adjust the slider to reveal your current level of financial courage.</p>
+          </div>
+          <div class="debt-savings">
+              <h2>Your Financial Stats</h2>
+              <div class="debt-input">
+                  <label for="debt-amount">Current Debt:</label>
+                  <input type="number" name="debt-amount" id="debt-amount" placeholder="Enter Amount">
+              </div>
+              <div class="savings-input">
+                  <label for="savings-amount">Current Savings:</label>
+                  <input type="number" name="savings-amount" id="savings-amount" placeholder="Enter Amount">
+              </div>
+          </div>
           <!-- Next Button to Proceed -->
           <button class="input-field animated-btn" id="financial-next" type="button">Begin Your Journey</button>
       </form>
@@ -237,7 +235,6 @@
             <p>Dream Car</p>
         </div>
     </div>
-
 
 <!-- Navigation Bar Container -->
 <div class="bottom-navigation-container">
