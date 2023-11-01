@@ -102,6 +102,30 @@ confidenceSlider.addEventListener('input', function() {
       console.log('Goal Deadline:', goalDeadline);
       console.log('Short-Term Goal:', selectedShortTermGoal);
       console.log('Long-Term Goal:', selectedLongTermGoal);
+
+    // First, add an ID to your profile picture element in your HTML:
+    // <div class="profile-picture" id="profile-picture">
+    //    <img src="profile-picture.jpg" alt="Your Profile Picture">
+    // </div>
+
+    // Next, add JavaScript to handle the click event and toggle between the dashboard and user profile:
+    const profilePicture = document.getElementById("profile-picture");
+    const dashboardPage = document.getElementById("user-dashboard-page-2");
+
+    // Initially, hide the user profile page
+    dashboardPage.style.display = "none";
+
+    // Add a click event listener to the profile picture
+    profilePicture.addEventListener("click", function () {
+      // Check if the dashboard page is currently visible
+      if (dashboardPage.style.display === "none") {
+        // If it's hidden, show it
+        dashboardPage.style.display = "block";
+      } else {
+        // If it's visible, hide it
+        dashboardPage.style.display = "none";
+      }
+    });
   });
   
 });

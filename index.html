@@ -125,7 +125,7 @@
                       <option value="pay-off-debt">Pay Off Debt💸</option>
                       <option value="improve-credit">Improve Credit💳</option>
                       <option value="become-a-trillionaire">Become a Trillionaire💰</option>
-                      <option value="world-domination">Take over the World🌎</option>
+                      <option value="world-domination">Take over the fucking World🌎</option>
                       <!-- Add more long-term goals here -->
                   </select>
               </div>
@@ -151,10 +151,9 @@
       </form>
   </div>
 
-  <!-- Personal Dashboard -->
-  <!-- Dashboard Page -->
 
-  <!-- Dashboard Page -->
+
+  <!-- Dashboard Page #1-->
   <div class="container" id="dashboard-container" style="display: none;">
         <h1 class="page-title">Your Custom Dashboard</h1>
 
@@ -174,6 +173,7 @@
             </div>
             <div class="profile-picture">
                 <img src="BronAvatar.png" alt="Kahbron's Character">
+              <button id="showUserProfileButton">Show User Profile</button>
             </div>
         </div>
 
@@ -236,18 +236,54 @@
         </div>
     </div>
 
-<!-- Navigation Bar Container -->
-<div class="bottom-navigation-container">
-    <div class="bottom-navigation">
-        <ul>
-            <li><a href="#home"></a></li>
-            <li><a href="#progress"></a></li>
-            <li><a href="#roadmap"></a></li>
-            <li><a href="#achievements"></a></li>
-            <li><a href="#moneybot"></a></li>
-        </ul>
-    </div>
-</div>
+     <!-- User Profile Visualization -->
+        <div class="container" id="user-profile-visualization">
+            <h1 class="page-title">User Profile Visualization</h1>
+
+            <!-- Rainy Day Fund -->
+            <div class="account-section">
+                <h2>Rainy Day Fund</h2>
+                <p class="edit-add">edit / add</p>
+                <p class="short-term">Short term</p>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 73%;"></div>
+                </div>
+                <p class="progress">73%</p>
+            </div>
+
+            <!-- XP and Earnings -->
+            <div class="earnings-section">
+                <p class="xp-earned">XP earned</p>
+                <p class="last-30-days">$849</p>
+                <p class="recent-accounts">$350.85</p>
+            </div>
+
+            <!-- Recent Accounts -->
+            <div class="recent-accounts">
+                <p>Rainy Day</p>
+                <p class="account-amount">$365.00 +6%</p>
+                <p class "account-change">(-$20.00)</p>
+
+                <p>Knee Surgery</p>
+                <p class="account-amount">$2,423.42 -12%</p>
+                <p class="account-change">(-$12.00)</p>
+            </div>
+
+            <!-- Next Activity -->
+            <div class="next-activity">
+                <p>Next Activity</p>
+                <p>Activity Name (30 XP) ➡️</p>
+            </div>
+        </div>
+
+        <!-- Include any necessary scripts -->
+        <script src="script.js"></script>
+    </body>
+    </html>
+
+
+
+
 
 <script src="script.js"></script>
 </body>

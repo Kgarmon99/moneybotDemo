@@ -558,22 +558,6 @@ a.dashboard-item-button:hover {
     background-size: cover; /* Make sure the icons fit the space */
 }
 
-/* Define the background position for each navigation item */
-.bottom-navigation li:nth-child(1) a {
-    background-image: url('home-icon.png'); /* Home icon image */
-}
-.bottom-navigation li:nth-child(2) a {
-    background-image: url('progress-icon.png'); /* Progress icon image */
-}
-.bottom-navigation li:nth-child(3) a {
-    background-image: url('roadmap-icon.png'); /* Roadmap icon image */
-}
-.bottom-navigation li:nth-child(4) a {
-    background-image: url('achievements-icon.png'); /* Achievements icon image */
-}
-.bottom-navigation li:nth-child(5) a {
-    background-image: url('moneybot-icon.png'); /* MoneyBot icon image */
-}
 
 /* Hover styles for links */
 .bottom-navigation li a:hover {
