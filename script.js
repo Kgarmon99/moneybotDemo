@@ -125,6 +125,22 @@ confidenceSlider.addEventListener('input', function() {
         // If it's visible, hide it
         dashboardPage.style.display = "none";
       }
+      // Get references to the button and the user profile visualization container
+      const showUserProfileButton = document.getElementById('showUserProfileButton');
+      const userProfileVisualization = document.getElementById('user-profile-visualization'); // This should match the ID of your user profile visualization container
+
+      // Add an event listener to the button
+      showUserProfileButton.addEventListener('click', function () {
+          // Check if the user profile visualization is currently hidden
+          if (userProfileVisualization.style.display === 'none') {
+              // If it's hidden, show it
+              userProfileVisualization.style.display = 'block';
+          } else {
+              // If it's visible, hide it
+              userProfileVisualization.style.display = 'none';
+            
+          }
+      });
     });
   });
   

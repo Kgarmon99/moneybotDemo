@@ -531,35 +531,57 @@ a.dashboard-item-button:hover {
     margin: 10px 0; /* Add margin for spacing */
 }
 /* Add this CSS to your stylesheet */
-.bottom-navigation {
-    background-image: url('index.html'); /* Replace 'new-background-image.jpg' with your desired background image */
-    background-repeat: no-repeat;
-    background-size: cover; /* Cover the entire width and height */
-    height: 50px; /* Set the height to your preferred value (e.g., 50px) */
-    width: 100%; /* Set the width to span the entire screen width */
-    position: fixed; /* Fix it to the bottom of the screen */
-    bottom: 0; /* Stick it to the bottom of the screen */
-    display: flex; /* Use flexbox for item alignment */
-    justify-content: space-around; /* Distribute items evenly */
-    align-items: center; /* Vertically center items */
-}
 
-.bottom-navigation ul {
-    list-style: none;
-    padding: 0;
-}
-
-.bottom-navigation li {
-    display: inline-block;
-    margin: 0; /* Remove the margin between items */
-    width: 40px; /* Set the width of the icons */
-    height: 40px; /* Set the height of the icons */
-    background-position: center center; /* Center the background image */
-    background-size: cover; /* Make sure the icons fit the space */
-}
 
 
 /* Hover styles for links */
 .bottom-navigation li a:hover {
     text-decoration: underline;
+}
+/* Styles for the user profile visualization page */
+#user-profile-visualization {
+    display: none; /* Initially hide the user profile visualization */
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.user-profile-header {
+    text-align: center;
+}
+
+.user-profile-header h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+.user-profile-header img {
+    max-width: 100px;
+    max-height: 100px;
+    border: 2px solid #333;
+    border-radius: 50%;
+}
+
+.user-profile-data {
+    margin-top: 20px;
+}
+
+.user-profile-data h3 {
+    font-size: 18px;
+    color: #333;
+}
+
+.user-profile-data p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.user-profile-data .xp-value {
+    font-weight: bold;
+    color: #ff9900;
+}
+
+.user-profile-data .money-value {
+    font-weight: bold;
+    color: #33cc33;
 }
