@@ -51,10 +51,6 @@ goalForm.addEventListener('submit', function(event) {
 
 // Additional JavaScript code for the dashboard or other sections
 // Example: Handling a button click in the dashboard
-const trackIncomeButton = document.getElementById('track-income-button');
-trackIncomeButton.addEventListener('click', function() {
-    // Implement what happens when the "Track Income" button is clicked
-});
 
 // Example: Adding dynamic content to the dashboard
 const dashboardContent = document.querySelector('.dashboard-content');
