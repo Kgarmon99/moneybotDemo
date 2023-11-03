@@ -13,14 +13,16 @@
     </header>
 
     <!-- Registration Page -->
-    <div class="container" id="registration-container" stle="display: none;">
+    <div class="container" id="registration-container" >
         <h1 class="page-title">LET'S GOOOO!🚀</h1>
         <!-- Registration form -->
         <form action="/register" method="POST">Kfk
             <!-- User registration fields -->
             <input class="input-field" type="text" name="username" placeholder="Gamertag" required>
             <input class="input-field" type="password" name="password" placeholder="Password" required>
-            <button class="input-field animated-btn" id="registration-next" type="button">Next</button>
+            <button class="input-field animated-btn" id="registration-next" 
+              
+              type="button">Next</button>
           
         </form>
     </div>
@@ -28,6 +30,7 @@
   <!-- Avatar Creation Page -->
   <div class="container" id="avatar-container" style="display: none;">
       <h1 class="page-title">Create Your MoneyBot Avatar</h1>
+    
       <!-- Avatar customization options -->
       <div class="avatar-preview">
           <img id="avatar-preview-image" src="BronAvatar.png" alt="Avatar Preview">
@@ -143,12 +146,18 @@
 
           <div class="goal-info">
               <h2>When's Your Deadline?</h2>
-              <input class="input-field" type="date" id="goal-deadline" required>
+              <input class="input-field" type="date" id="goal-deadline" value="2030-04-05" required>
           </div>
 
           <button class="input-field animated-btn" id="add-goal" type="button">Add Goal</button>
           <button class="input-field animated-btn" id="goal-next" type="button">Next</button>
       </form>
+
+    <div id="goalSummary" style="background-color: pink">
+      <h3 id="goalTitle">My Goal:</h3>
+      <p>Raise <span id="goalAmount"></span></p> by <span id="goalDate"></span>.
+    </div>
+
   </div>
 
 
@@ -170,12 +179,14 @@
                     <a href="#" class="level-button">Level 2</a>
                     <a href="#" class="rank-button">Rank #1 out of 248,023</a>
                 </div>
+           
             </div>
-            <div class="profile-picture">
-                <img src="BronAvatar.png" alt="Kahbron's Character">
-              <button id="showUserProfileButton" class="level-button">Show More</button>
+            <div id="profile-picture">
+                <img src="BronAvatar.png" alt="Kahbron's Character"/>
             </div>
+         
         </div>
+     <button id="showUserProfileButton" class="level-button">Show More</button>
 
 
       <!-- Accounts Dashboard -->
@@ -236,50 +247,49 @@
         </div>
     </div>
 
-     <!-- User Profile Visualization -->
-        <div class="container" id="user-profile-visualization">
-            <h1 class="page-title">User Profile Visualization</h1>
+    <!-- ... (your existing code) ... -->
 
-            <!-- Rainy Day Fund -->
-            <div class="account-section">
-                <h2>Rainy Day Fund</h2>
-                <p class="edit-add">edit / add</p>
-                <p class="short-term">Short term</p>
-                <div class="progress-bar">
-                    <div class="progress-fill" style="width: 73%;"></div>
-                </div>
-                <p class="progress">73%</p>
+    <!-- ... (your existing code) ... -->
+
+    <!-- User Profile Visualization -->
+    <div class="container" id="user-profile-visualization" style="display: none;">
+        <h1 class="page-title">User Profile Visualization</h1>
+
+        <!-- Rainy Day Fund -->
+        <div class="account-section">
+            <h2>Rainy Day Fund</h2>
+            <p class="edit-add">edit / add</p>
+            <p class="short-term">Short term</p>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 73%;"></div>
             </div>
-
-            <!-- XP and Earnings -->
-            <div class="earnings-section">
-                <p class="xp-earned">XP earned</p>
-                <p class="last-30-days">$849</p>
-                <p class="recent-accounts">$350.85</p>
-            </div>
-
-            <!-- Recent Accounts -->
-            <div class="recent-accounts">
-                <p>Rainy Day</p>
-                <p class="account-amount">$365.00 +6%</p>
-                <p class "account-change">(-$20.00)</p>
-
-                <p>Knee Surgery</p>
-                <p class="account-amount">$2,423.42 -12%</p>
-                <p class="account-change">(-$12.00)</p>
-            </div>
-
-            <!-- Next Activity -->
-            <div class="next-activity">
-                <p>Next Activity</p>
-                <p>Activity Name (30 XP) ➡️</p>
-            </div>
+            <p class="progress">73%</p>
         </div>
 
-        <!-- Include any necessary scripts -->
+        <!-- XP and Earnings -->
+        <div class="earnings-section">
+            <p class="xp-earned">XP earned</p>
+            <p class="last-30-days">849</p>
+            <p class="recent-accounts">$350.85</p>
+        </div>
 
+        <!-- Recent Accounts -->
+        <div class="recent-accounts">
+            <p>Rainy Day</p>
+            <p class="account-amount">$365.00 +6%</p>
+            <p class="account-change">(-$20.00)</p>
 
+            <p>Knee Surgery</p>
+            <p class="account-amount">$2,423.42 -12%</p>
+            <p class="account-change">(-$12.00)</p>
+        </div>
 
+        <!-- Next Activity -->
+        <div class="next-activity">
+            <p>Next Activity</p>
+            <p>Activity Name (30 XP) ➡️</p>
+        </div>
+    </div>
 
 
 <script src="script.js"></script>

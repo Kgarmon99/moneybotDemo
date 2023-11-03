@@ -63,7 +63,7 @@ newDashboardItem.innerHTML = `
     <a href="#" class="dashboard-item-button">Explore</a>
 `;
 // Append the new item to the dashboard
-dashboardContent.appendChild(newDashboardItem);
+//dashboardContent.appendChild(newDashboardItem);
 
 // You can add more interactions and functionality for specific sections as needed
 // Get references to the HTML elements
@@ -78,7 +78,7 @@ confidenceSlider.addEventListener('input', function() {
     const sliderValue = parseInt(confidenceSlider.value);
     // Update the displayed value based on the slider value and confidence levels
     confidenceValue.textContent = confidenceLevels[sliderValue];
-
+});
   // Handle "Add Goal" button click to add selected goals to the list
   const addGoalButton = document.getElementById('add-goal');
   addGoalButton.addEventListener('click', function () {
@@ -99,6 +99,14 @@ confidenceSlider.addEventListener('input', function() {
       console.log('Short-Term Goal:', selectedShortTermGoal);
       console.log('Long-Term Goal:', selectedLongTermGoal);
 
+    // Update the My Goal Pop-up
+    document.getElementById('goalTitle').innerHTML = goalDescription.toString();
+    document.getElementById('goalAmount').innerHTML = goalAmount.toString();
+    document.getElementById('goalDate').innerHTML = goalDeadline.toString();
+    document.getElementById('goalSummary').style.display = "block";
+    
+  });
+  
     // First, add an ID to your profile picture element in your HTML:
     // <div class="profile-picture" id="profile-picture">
     //    <img src="profile-picture.jpg" alt="Your Profile Picture">
@@ -106,10 +114,10 @@ confidenceSlider.addEventListener('input', function() {
 
     // Next, add JavaScript to handle the click event and toggle between the dashboard and user profile:
     const profilePicture = document.getElementById("profile-picture");
-    const dashboardPage = document.getElementById("user-dashboard-page-2");
+    // const dashboardPage = document.getElementById("user-dashboard-page-2");
 
-    // Initially, hide the user profile page
-    dashboardPage.style.display = "none";
+    // // Initially, hide the user profile page
+    // dashboardPage.style.display = "none";
 
     // Add a click event listener to the profile picture
     profilePicture.addEventListener("click", function () {
@@ -121,12 +129,16 @@ confidenceSlider.addEventListener('input', function() {
         // If it's visible, hide it
         dashboardPage.style.display = "none";
       }
+    });
+
       // Get references to the button and the user profile visualization container
-      const showUserProfileButton = document.getElementById('showUserProfileButton');
-      const userProfileVisualization = document.getElementById('user-profile-visualization'); // This should match the ID of your user profile visualization container
+      const showUserProfileButton = document.getElementById("showUserProfileButton");
+      const userProfileVisualization = document.getElementById("user-profile-visualization"); // This should match the ID of your user profile visualization container
+
 
       // Add an event listener to the button
       showUserProfileButton.addEventListener('click', function () {
+          console.log("Show More Button Pressed");
           // Check if the user profile visualization is currently hidden
           if (userProfileVisualization.style.display === 'none') {
               // If it's hidden, show it
@@ -137,7 +149,3 @@ confidenceSlider.addEventListener('input', function() {
             
           }
       });
-    });
-  });
-  
-});
