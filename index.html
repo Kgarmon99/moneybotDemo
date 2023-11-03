@@ -253,28 +253,51 @@
 
     <!-- User Profile Visualization -->
     <div class="container" id="user-profile-visualization" style="display: none;">
+        <!-- MoneyBot Logo at the top middle -->
+        <div class="logo">
+            <img src="moneybot_logo.png" alt="MoneyBot Logo">
+        </div>
+        <!-- Avatar Logo at the top right corner -->
+        <div class="profile-picture">
+            <img src="avatar_logo.png" alt="Avatar Logo">
+        </div>
+
         <h1 class="page-title">User Profile Visualization</h1>
 
-        <!-- Rainy Day Fund -->
-        <div class="account-section">
-            <h2>Rainy Day Fund</h2>
-            <p class="edit-add">edit / add</p>
+       
+      <!-- Rainy Day Fund -->
+      <div class="section-box">
+          <div class="section-header">
+              <h2>Rainy Day Fund</h2>
+              <div class="section-buttons">
+                  <button class="edit-add-button">Edit</button>
+                  <button class="edit-add-button">Add</button>
+              </div>
+          </div>
+       
             <p class="short-term">Short term</p>
+            <!-- Progress Bar -->
             <div class="progress-bar">
                 <div class="progress-fill" style="width: 73%;"></div>
             </div>
             <p class="progress">73%</p>
         </div>
 
-        <!-- XP and Earnings -->
-        <div class="earnings-section">
+        <!-- XP Earned -->
+        <div class="section-box">
+            <div class="section-header">
+                <h2>XP and Earnings</h2>
+            </div>
             <p class="xp-earned">XP earned</p>
             <p class="last-30-days">849</p>
             <p class="recent-accounts">$350.85</p>
         </div>
 
         <!-- Recent Accounts -->
-        <div class="recent-accounts">
+        <div class="section-box">
+            <div class="section-header">
+                <h2>Recent Accounts</h2>
+            </div>
             <p>Rainy Day</p>
             <p class="account-amount">$365.00 +6%</p>
             <p class="account-change">(-$20.00)</p>
@@ -285,12 +308,32 @@
         </div>
 
         <!-- Next Activity -->
-        <div class="next-activity">
-            <p>Next Activity</p>
+        <div class="section-box">
+            <div class="section-header">
+                <h2>Next Activity</h2>
+            </div>
             <p>Activity Name (30 XP) ➡️</p>
         </div>
-    </div>
 
+        <!-- Pay Off Credit Cards -->
+      <!-- Pay Off Credit Cards -->
+      <div class="section-box">
+          <div "section-header">
+              <h2>Pay Off Credit Cards</h2>
+              <div class="section-buttons">
+                  <button class="edit-add-button">Edit</button>
+                  <button class="edit-add-button">Add</button>
+              </div>
+          </div>
+      </div>
+            <p class="short-term">Short term</p>
+            <!-- Progress Bar -->
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 21%;"></div>
+            </div>
+            <p class="progress">21%</p>
+        </div>
+    </div>
 
 <script src="script.js"></script>
 </body>

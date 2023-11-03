@@ -598,51 +598,208 @@
     text-decoration: underline;
   }
 
-  /* Styles for the user profile visualization page */
-  #user-profile-visualization {
-    display: none;
-    /* Initially hide the user profile visualization */
-    background-color: #f0f0f0;
-    padding: 20px;
-  }
-
-  .user-profile-header {
-    text-align: center;
-  }
-
-  .user-profile-header h2 {
-    font-size: 24px;
-    color: #333;
-  }
-
-  .user-profile-header img {
-    max-width: 100px;
-    max-height: 100px;
-    border: 2px solid #333;
-    border-radius: 50%;
-  }
-
-  .user-profile-data {
+/* Additional styles for User Profile Visualization */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 #00ff99;
+    transition: transform 0.5s ease, opacity 0.5s ease;
     margin-top: 20px;
-  }
+}
 
-  .user-profile-data h3 {
-    font-size: 18px;
-    color: #333;
-  }
+.container:hover {
+    transform: translateY(-10px);
+    opacity: 0.9;
+}
 
-  .user-profile-data p {
+/* Additional styles for section headers */
+.container h2 {
+    color: #00ff99;
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+/* Additional styles for progress bars */
+.progress-bar {
+    width: 100%;
+    background-color: black;
+    border: 2px solid #00ff99;
+    border-radius: 10px;
+    height: 20px;
+    margin-top: 5px;
+}
+
+.progress-fill {
+    width: 0;
+    background-color: #00ff99;
+    height: 100%;
+    border-radius: 8px;
+}
+
+/* Additional styles for text and data */
+.container p {
+    color: white;
     font-size: 16px;
-    color: #666;
-    margin-bottom: 10px;
-  }
+    margin: 10px 0;
+}
 
-  .user-profile-data .xp-value {
-    font-weight: bold;
+/* Additional styles for edit/add links */
+.edit-add {
+    color: #00ff99;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* Additional styles for short-term text */
+.short-term {
     color: #ff9900;
-  }
+}
 
-  .user-profile-data .money-value {
-    font-weight: bold;
+/* Additional styles for Recent Accounts section */
+.recent-accounts p {
+    display: inline;
+    margin-right: 10px;
+}
+
+.account-amount {
     color: #33cc33;
-  }
+}
+
+.account-change {
+    color: #ff0000;
+}
+
+/* Additional styles for Next Activity section */
+.next-activity p {
+    display: inline;
+}
+
+/* Additional styles for cool green borders */
+.container .progress-bar, .container .progress-fill {
+    background-color: black;
+}
+
+.container .progress-bar {
+    border: 2px solid #00ff99;
+}
+
+/* Add these styles to your existing CSS for other elements */
+/* Additional styles for User Profile Visualization */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 #00ff99;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    margin-top: 20px;
+}
+
+.container:hover {
+    transform: translateY(-10px);
+    opacity: 0.9;
+}
+
+/* Styles for section boxes */
+.section-box {
+    border: 2px solid #00ff99;
+    border-radius: 10px;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Additional styles for User Profile Visualization */
+/* ... (Previous CSS) ... */
+
+/* Styles for section headers and buttons */
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.section-header h2 {
+    color: #00ff99;
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+/* Styles for edit and add buttons */
+.section-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.section-buttons button {
+    background-color: #00ff99;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+/* Additional styles for progress bars */
+.progress-bar {
+    width: 100%;
+    background-color: black;
+    border: 2px solid #00ff99;
+    border-radius: 10px;
+    height: 20px;
+    margin-top: 5px;
+}
+
+.progress-fill {
+    width: 0;
+    background-color: #00ff99;
+    height: 100%;
+    border-radius: 8px;
+}
+.button {
+    background-color: black;
+    color: white;
+    border: 2px solid transparent;
+    border-image: linear-gradient(to right, #00ff00, transparent);
+    border-image-slice: 1;
+    transition: border-color 0.3s;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+    text-align: center;
+}
+
+.button:hover {
+    border-color: transparent;
+}
+
+/* Additional styles for edit and add buttons */
+.edit-add-button {
+    background-color: black;
+    color: white;
+    border: 2px solid transparent;
+    border-image: linear-gradient(to right, #00ff00, transparent);
+    border-image-slice: 1;
+    transition: border-color 0.3s;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+    text-align: center;
+    margin-left: 10px; /* Add margin to separate the buttons */
+}
+
+.edit-add-button:hover {
+    border-color: transparent;
+}
+
