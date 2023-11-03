@@ -1,0 +1,96 @@
+/* Base styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Page title */
+.page-title {
+  color: #00ff99;
+  font-size: 24px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Roadmap section */
+.roadmap {
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  margin: 20px 0;
+  box-shadow: 0px 0px 10px 0px #00ff99;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.roadmap h2 {
+  color: #00ff99;
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.roadmap-step {
+  color: white;
+  font-size: 16px;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 70%;
+  /* Set a width for each step */
+  border: 2px solid #00ff99;
+  /* Add a green border */
+  border-radius: 10px;
+  /* Add border radius */
+  padding: 10px;
+  /* Add padding */
+  text-align: center;
+  /* Center the text */
+  margin: 10px;
+  /* Add margin for spacing */
+}
+
+.roadmap-step p {
+  width: 70%;
+  /* Take the full width */
+  margin: 10px 0;
+}
+
+.roadmap-progress {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #00ff99;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #00ff99;
+  text-shadow: 0px 0px 10px #00ff99;
+  margin: 10px 0;
+  /* Add margin for spacing */
+}
+
+/* General Button Styles */
+a.roadmap-step-button {
+  background-color: #00ff99;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
+  margin: 10px auto;
+}
+
+a.roadmap-step-button:hover {
+  background-color: #00cc77;
+  transform: scale(1.05);
+}

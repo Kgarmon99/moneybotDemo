@@ -285,7 +285,7 @@
       <!-- XP Earned -->
       <div class="section-box">
           <div class="section-header">
-              <h2>XP and Earnings</h2>
+              <h2>XP Earned</h2>
           </div>
           <p class="xp-earned">XP earned</p>
           <p class="last-30-days">849</p>
@@ -340,6 +340,23 @@
           </div>
           <p class="progress">21%</p>
       </div>
+
+      <!-- Button to navigate to the gamified roadmap -->
+      <button id="goToRoadmapButton">Go to Roadmap</button>
+
+      <!-- JavaScript placed at the end of the HTML document -->
+      <script>
+          // Function to navigate to the Roadmap page
+          function goToRoadmap() {
+              // Change the URL to the new roadmap page (e.g., "roadmap.html")
+              window.location.href = 'roadmap.html';
+          }
+
+          // Add an event listener to the button for navigation
+          document.getElementById('goToRoadmapButton').addEventListener('click', goToRoadmap);
+      </script>
+      </body>
+      </html>
 
 <script src="script.js"></script>
 </body>
