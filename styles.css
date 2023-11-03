@@ -803,3 +803,32 @@
     border-color: transparent;
 }
 
+/* Style for the account boxes */
+.account-box {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    border: 3px solid #00ff99; /* Add a green border to each account box */
+}
+
+/* Style for the green borders between account boxes */
+.account-box + .account-box {
+    border-top: none;
+}
+.account-data {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.account-data p {
+    flex: 1;
+    text-align: center;
+}
