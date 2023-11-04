@@ -459,6 +459,19 @@
     align-items: center;
     color: #00ff99;
     text-shadow: 0px 0px 10px #00ff99;
+ 
+  }
+
+  .seventy-three {
+    background: linear-gradient(to right, green, green 73%, transparent 73%, transparent);
+  }
+
+  .twenty-one {
+    background: linear-gradient(to right, green, green 21%, transparent 21%, transparent);
+  }
+
+  .five {
+    background: linear-gradient(to right, green, green 5%, transparent 5%, transparent);
   }
 
   /* General Button Styles */
@@ -598,8 +611,8 @@
     text-decoration: underline;
   }
 
-/* Additional styles for User Profile Visualization */
-.container {
+  /* Additional styles for User Profile Visualization */
+  .container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -610,87 +623,88 @@
     box-shadow: 0 0 10px 0 #00ff99;
     transition: transform 0.5s ease, opacity 0.5s ease;
     margin-top: 20px;
-}
+  }
 
-.container:hover {
+  .container:hover {
     transform: translateY(-10px);
     opacity: 0.9;
-}
+  }
 
-/* Additional styles for section headers */
-.container h2 {
+  /* Additional styles for section headers */
+  .container h2 {
     color: #00ff99;
     font-size: 24px;
     margin-top: 20px;
-}
+  }
 
-/* Additional styles for progress bars */
-.progress-bar {
+  /* Additional styles for progress bars */
+  .progress-bar {
     width: 100%;
     background-color: black;
     border: 2px solid #00ff99;
     border-radius: 10px;
     height: 20px;
     margin-top: 5px;
-}
+  }
 
-.progress-fill {
+  .progress-fill {
     width: 0;
     background-color: #00ff99;
     height: 100%;
     border-radius: 8px;
-}
+  }
 
-/* Additional styles for text and data */
-.container p {
+  /* Additional styles for text and data */
+  .container p {
     color: white;
     font-size: 16px;
     margin: 10px 0;
-}
+  }
 
-/* Additional styles for edit/add links */
-.edit-add {
+  /* Additional styles for edit/add links */
+  .edit-add {
     color: #00ff99;
     text-decoration: underline;
     cursor: pointer;
-}
+  }
 
-/* Additional styles for short-term text */
-.short-term {
+  /* Additional styles for short-term text */
+  .short-term {
     color: #ff9900;
-}
+  }
 
-/* Additional styles for Recent Accounts section */
-.recent-accounts p {
+  /* Additional styles for Recent Accounts section */
+  .recent-accounts p {
     display: inline;
     margin-right: 10px;
-}
+  }
 
-.account-amount {
+  .account-amount {
     color: #33cc33;
-}
+  }
 
-.account-change {
+  .account-change {
     color: #ff0000;
-}
+  }
 
-/* Additional styles for Next Activity section */
-.next-activity p {
+  /* Additional styles for Next Activity section */
+  .next-activity p {
     display: inline;
-}
+  }
 
-/* Additional styles for cool green borders */
-.container .progress-bar, .container .progress-fill {
+  /* Additional styles for cool green borders */
+  .container .progress-bar,
+  .container .progress-fill {
     background-color: black;
-}
+  }
 
-.container .progress-bar {
+  .container .progress-bar {
     border: 2px solid #00ff99;
-}
+  }
 
-/* Add these styles to your existing CSS for other elements */
-/* Additional styles for User Profile Visualization */
-.container {
+  /* Add these styles to your existing CSS for other elements */
+  /* Additional styles for User Profile Visualization */
+  .container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -701,45 +715,45 @@
     box-shadow: 0 0 10px 0 #00ff99;
     transition: transform 0.5s ease, opacity 0.5s ease;
     margin-top: 20px;
-}
+  }
 
-.container:hover {
+  .container:hover {
     transform: translateY(-10px);
     opacity: 0.9;
-}
+  }
 
-/* Styles for section boxes */
-.section-box {
+  /* Styles for section boxes */
+  .section-box {
     border: 2px solid #00ff99;
     border-radius: 10px;
     margin: 20px 0;
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.6);
-}
+  }
 
-/* Additional styles for User Profile Visualization */
-/* ... (Previous CSS) ... */
+  /* Additional styles for User Profile Visualization */
+  /* ... (Previous CSS) ... */
 
-/* Styles for section headers and buttons */
-.section-header {
+  /* Styles for section headers and buttons */
+  .section-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
+  }
 
-.section-header h2 {
+  .section-header h2 {
     color: #00ff99;
     font-size: 24px;
     margin-top: 20px;
-}
+  }
 
-/* Styles for edit and add buttons */
-.section-buttons {
+  /* Styles for edit and add buttons */
+  .section-buttons {
     display: flex;
     align-items: center;
-}
+  }
 
-.section-buttons button {
+  .section-buttons button {
     background-color: #00ff99;
     color: black;
     border: none;
@@ -747,25 +761,26 @@
     padding: 5px 10px;
     cursor: pointer;
     margin-left: 10px;
-}
+  }
 
-/* Additional styles for progress bars */
-.progress-bar {
+  /* Additional styles for progress bars */
+  .progress-bar {
     width: 100%;
     background-color: black;
     border: 2px solid #00ff99;
     border-radius: 10px;
     height: 20px;
     margin-top: 5px;
-}
+  }
 
-.progress-fill {
+  .progress-fill {
     width: 0;
     background-color: #00ff99;
     height: 100%;
     border-radius: 8px;
-}
-.button {
+  }
+
+  .button {
     background-color: black;
     color: white;
     border: 2px solid transparent;
@@ -777,14 +792,14 @@
     border-radius: 5px;
     display: inline-block;
     text-align: center;
-}
+  }
 
-.button:hover {
+  .button:hover {
     border-color: transparent;
-}
+  }
 
-/* Additional styles for edit and add buttons */
-.edit-add-button {
+  /* Additional styles for edit and add buttons */
+  .edit-add-button {
     background-color: black;
     color: white;
     border: 2px solid transparent;
@@ -796,15 +811,16 @@
     border-radius: 5px;
     display: inline-block;
     text-align: center;
-    margin-left: 10px; /* Add margin to separate the buttons */
-}
+    margin-left: 10px;
+    /* Add margin to separate the buttons */
+  }
 
-.edit-add-button:hover {
+  .edit-add-button:hover {
     border-color: transparent;
-}
+  }
 
-/* Style for the account boxes */
-.account-box {
+  /* Style for the account boxes */
+  .account-box {
     background-color: rgba(0, 0, 0, 0.6);
     padding: 10px;
     border-radius: 10px;
@@ -814,21 +830,23 @@
     align-items: center;
     text-align: center;
     width: 100%;
-    border: 3px solid #00ff99; /* Add a green border to each account box */
-}
+    border: 3px solid #00ff99;
+    /* Add a green border to each account box */
+  }
 
-/* Style for the green borders between account boxes */
-.account-box + .account-box {
+  /* Style for the green borders between account boxes */
+  .account-box+.account-box {
     border-top: none;
-}
-.account-data {
+  }
+
+  .account-data {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-}
+  }
 
-.account-data p {
+  .account-data p {
     flex: 1;
     text-align: center;
-}
+  }

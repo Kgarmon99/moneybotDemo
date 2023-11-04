@@ -1,96 +1,135 @@
 /* Base styling */
 body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  background-color: black;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
 }
 
-/* Page title */
-.page-title {
-  color: #00ff99;
-  font-size: 24px;
-  margin-top: 10px;
-  text-align: center;
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* Roadmap section */
-.roadmap {
-  padding: 20px;
-  background-color: rgba(0, 0, 0, 0.6);
-  border-radius: 10px;
-  margin: 20px 0;
-  box-shadow: 0px 0px 10px 0px #00ff99;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.app-title {
+    color: #00ff99;
+    font-size: 24px;
+    margin-top: 10px;
+    text-align: center;
 }
 
-.roadmap h2 {
-  color: #00ff99;
-  font-size: 24px;
-  margin: 10px 0;
+.moneybot-logo {
+    width: 60px;
+    height: 60px;
+    background-color: #00ff99;
+    border-radius: 50%;
+    margin: 10px;
 }
 
-.roadmap-step {
-  color: white;
-  font-size: 16px;
-  margin: 10px 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 70%;
-  /* Set a width for each step */
-  border: 2px solid #00ff99;
-  /* Add a green border */
-  border-radius: 10px;
-  /* Add border radius */
-  padding: 10px;
-  /* Add padding */
-  text-align: center;
-  /* Center the text */
-  margin: 10px;
-  /* Add margin for spacing */
+.profile-picture {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    background-color: #00ff99;
+    border-radius: 50%;
 }
 
-.roadmap-step p {
-  width: 70%;
-  /* Take the full width */
-  margin: 10px 0;
+main {
+    display: flex;
+    justify-content: center;
 }
 
-.roadmap-progress {
-  width: 40px;
-  height: 40px;
-  border: 2px solid #00ff99;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #00ff99;
-  text-shadow: 0px 0px 10px #00ff99;
-  margin: 10px 0;
-  /* Add margin for spacing */
+/* Adjusted buttons and path to have a game-like appearance with a winding road effect */
+.path {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 20px 0;
 }
 
-/* General Button Styles */
-a.roadmap-step-button {
-  background-color: #00ff99;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  cursor: pointer;
-  text-decoration: none;
-  display: block;
-  margin: 10px auto;
+.level-button {
+    background-color: #00ff99;
+    color: white;
+    border: none; /* Removed border to increase button size */
+    padding: 10px 20px;
+    border-radius: 50px; /* Adjusted border-radius for a larger button */
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px; /* Adjusted font size for better visibility */
+    font-weight: bold;
+    transition: background-color 0.3s;
+    position: relative;
 }
 
-a.roadmap-step-button:hover {
-  background-color: #00cc77;
-  transform: scale(1.05);
+.level-button::after {
+    content: '';
+    position: absolute;
+    width: auto;
+    height: auto;
+    background: #00ff99;
+    top: 50px; /* Adjusted the position for the winding road effect */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.level-button.start::before {
+    content: '';
+    position: absolute;
+    width: 150px; /* Adjusted width for the start button */
+    height: 4px;
+    background: #00ff99;
+    top: 50px; /* Adjusted the position for the winding road effect */
+    left: -50px;
+}
+
+.level-button.finish::after {
+    content: '';
+    position: absolute;
+    width: 150px; /* Adjusted width for the finish button */
+    height: 4px;
+    background: #00ff99;
+    top: 50px; /* Adjusted the position for the winding road effect */
+    right: -50px;
+}
+
+.level-button:hover {
+    background-color: #00cc77;
+}
+
+/* Banner-style navigation bar with individual boxes */
+.bottom-navigation {
+    background-color: #00ff99;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+
+nav-box {
+    background-color: black;
+    border: 2px solid #00ff99;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+nav-box a {
+    color: #00ff99;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav-box a:hover {
+    background-color: #00cc77;
+    color: black;
 }

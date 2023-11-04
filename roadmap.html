@@ -3,63 +3,186 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Financial Literacy Roadmap</title>
-    <!-- Include your CSS and JavaScript files for styling and functionality -->
-    <link rel="stylesheet" href="roadmap.css">
-    <script src="roadmap.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>MoneyBot Gamified Page</title>
+    <style>
+        /* Add your CSS here */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding: 10px;
+            position: fixed;
+            top: 0;
+            z-index: 100;
+            background-color: black; /* Your color scheme */
+        }
+
+        .app-title {
+            color: #00ff99; /* Your color scheme */
+            font-size: 20px;
+            text-align: center;
+            margin: 0;
+        }
+
+        .top-icons {
+            display: flex;
+            align-items: center;
+        }
+
+        .icon {
+            width: 30px;
+            height: 30px;
+            background-color: #00ff99; /* Your color scheme */
+            border-radius: 50%;
+        }
+
+        .level-header {
+            background-color: #00ff99; /* Your color scheme */
+            color: black; /* Text color */
+            font-size: 24px;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .roadmap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 60px; /* Create space for profile pics and text */
+        }
+
+        .level-button {
+            background-color: black; /* Black background for buttons */
+            color: #00ff99; /* Text color */
+            border: 2px solid #00ff99; /* Border */
+            padding: 10px 40px;
+            border-radius: 50px;
+            cursor: pointer;
+            text-align: center;
+            font-size: 14px;
+            font-weight: bold;
+            margin: 10px 0;
+            transition: background-color 0.3s;
+        }
+
+        .profile-pic {
+            width: 50px; /* Adjust size as needed */
+            height: 50px;
+            border-radius: 50%;
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            z-index: 101;
+        }
+
+        .moneybot-pic {
+            width: 50px; /* Adjust size as needed */
+            height: 50px;
+            border-radius: 50%;
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            z-index: 101;
+        }
+
+        .fire-emoji {
+            width: 50px; /* Adjust size as needed */
+            height: 50px;
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            z-index: 101;
+        }
+
+        .level-title {
+            color: #00ff99; /* Your color scheme */
+            font-size: 16px;
+        }
+
+        /* Banner-style navigation bar with individual boxes */
+        .bottom-navigation {
+            background-color: #00ff99; /* Your color scheme */
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            z-index: 100;
+        }
+
+        .nav-box {
+            background-color: black;
+            border: 2px solid #00ff99; /* Border */
+            border-radius: 10px;
+            padding: 5px;
+            text-align: center;
+        }
+
+        .nav-box a {
+            color: #00ff99; /* Your color scheme */
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .nav-box a:hover {
+            background-color: #00cc77;
+            color: black;
+        }
+    </style>
 </head>
 <body>
-    <div class="roadmap-container">
-        <!-- Title of the roadmap -->
-        <div class="roadmap-title">Financial Literacy Roadmap</div>
-
-        <!-- Level 1: Basics -->
-        <div class="level level-1">
-            <div class="level-header">Level 1: Basics</div>
-            <div class="challenges">
-                <!-- Challenges for Level 1 -->
-                <div class="challenge">Savings 101</div>
-                <div class="challenge">Budgeting Basics</div>
-                <div class="challenge">Understanding Credit</div>
-                <!-- Add more challenges as needed -->
-            </div>
+    <header>
+        <div class="top-icons">
+            <img class="fire-emoji" src="Fire Emoji.jpg" alt="Fire Emoji">
+            <img class="profile-pic" src="BronAvatar.png" alt="Profile Pic">
+            <img class="moneybot-pic" src="OGMONEYBOTLOGO.PNG" alt="Moneybot Pic">
         </div>
-
-      <!-- Level 2: Investments -->
-      <div class="level level-2">
-          <div class="level-header">Level 2: Investments</div>
-          <div class="challenges"> <!-- Corrected "class" attribute -->
-              <!-- Challenges for Level 2 -->
-              <div class="challenge">Stock Market Mastery</div>
-              <div class="challenge">Real Estate Investing</div>
-              <div class="challenge">Retirement Planning</div>
-              <!-- Add more challenges as needed -->
-          </div>
-      </div>
-
-        <!-- Level 3: Advanced Finance -->
-        <div class="level level-3">
-            <div class="level-header">Level 3: Advanced Finance</div>
-            <div class="challenges">
-                <!-- Challenges for Level 3 -->
-                <div class="challenge">Tax Strategies</div>
-                <div class="challenge">Estate Planning</div>
-                <div class="challenge">Entrepreneurship</div>
-                <!-- Add more challenges as needed -->
-            </div>
+    </header>
+    <div class="level-header" onclick="toggleRoadmap()">
+        <p>LVL. 3: History of Money</p>
+    </div>
+    <div class="roadmap" id="roadmap">
+        <div class="level-title">Start</div>
+        <button class="level-button start">Level 1</button>
+        <button class="level-button">Level 2</button>
+        <button class="level-button start">Level 3</button>
+        <button class="level-button">Level 4</button>
+        <button class="level-button start">Finish</button>
+    </div>
+    <div class="bottom-navigation">
+        <div class="nav-box">
+            <a href="home.html">Home</a>
         </div>
-
-        <!-- Level 4: Financial Mastery -->
-        <div class="level level-4">
-            <div class="level-header">Level 4: Financial Mastery</div>
-            <div class="challenges">
-                <!-- Challenges for Level 4 -->
-                <div class="challenge">Investment Portfolio Management</div>
-                <div class="challenge">Financial Independence</div>
-                <div class="challenge">Wealth Creation</div>
-                <!-- Add more challenges as needed -->
-            </div>
+        <div class="nav-box">
+            <a href="dashboard.html">Dashboard</a>
+        </div>
+        <div class="nav-box">
+            <a href="awards.html">Awards</a>
+        </div>
+        <div class="nav-box">
+            <a href="bot.html">Bot</a>
         </div>
     </div>
+    <script>
+        function toggleRoadmap() {
+            const roadmap = document.getElementById("roadmap");
+            roadmap.style.display = roadmap.style.display === "none" ? "block" : "none";
+        }
+    </script>
 </body>
 </html>
