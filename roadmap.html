@@ -65,19 +65,62 @@
             margin-top: 60px; /* Create space for profile pics and text */
         }
 
-        .level-button {
-            background-color: black; /* Black background for buttons */
-            color: #00ff99; /* Text color */
-            border: 2px solid #00ff99; /* Border */
-            padding: 10px 40px;
-            border-radius: 50px;
-            cursor: pointer;
-            text-align: center;
-            font-size: 14px;
-            font-weight: bold;
-            margin: 10px 0;
-            transition: background-color 0.3s;
-        }
+      .level-button {
+          background-color: black;
+          color: #00ff99;
+          border: 2px solid #00ff99;
+          padding: 10px 20px; /* Adjust the padding as needed */
+          border-radius: 50px;
+          cursor: pointer;
+          text-align: center;
+          font-size: 14px;
+          font-weight: bold;
+          display: inline-block;
+          position: relative;
+          margin: 10px; /* Add margin to separate buttons */
+          width: 100px; /* Adjust the width as needed */
+      }
+
+      .level-button::before {
+          content: '';
+          background-color: black;
+          position: absolute;
+          width: 100%;
+          height: 50%;
+          top: 0;
+          left: 0;
+          border-radius: 0 0 50% 50%; /* Create the backward "C" shape */
+      }
+
+      .level-button:hover::before {
+          background-color: #00ff99; /* Glowing green on hover */
+      }
+      }
+
+      .level-button:nth-child(1) {
+          margin-top: 0;
+          left: 10px;
+      }
+
+      .level-button:nth-child(2) {
+          margin-top: 70px; /* Shortened the distance between buttons */
+          left: 90px; /* Wider curve */
+      }
+
+      .level-button:nth-child(3) {
+          margin-top: 120px; /* Shortened the distance between buttons */
+          left: 140px; /* Wider curve */
+      }
+
+      .level-button:nth-child(4) {
+          margin-top: 180px; /* Shortened the distance between buttons */
+          left: 90px; /* Wider curve */
+      }
+
+      .level-button:nth-child(5) {
+          margin-top: 250px; /* Shortened the distance between buttons */
+          left: 40px; /* Wider curve */
+      }
 
         .profile-pic {
             width: 50px; /* Adjust size as needed */
@@ -148,41 +191,42 @@
 <body>
     <header>
         <div class="top-icons">
-            <img class="fire-emoji" src="Fire Emoji.jpg" alt="Fire Emoji">
-            <img class="profile-pic" src="BronAvatar.png" alt="Profile Pic">
-            <img class="moneybot-pic" src="OGMONEYBOTLOGO.PNG" alt="Moneybot Pic">
+            <img class="fire-emoji" src="fire-emoji.png" alt="Fire Emoji">
+            <img class="profile-pic" src="profile-pic.jpg" alt="Profile Pic">
+            <img class="moneybot-pic" src="moneybot-pic.jpg" alt="Moneybot Pic">
         </div>
     </header>
     <div class="level-header" onclick="toggleRoadmap()">
         <p>LVL. 3: History of Money</p>
     </div>
     <div class="roadmap" id="roadmap">
-        <div class="level-title">Start</div>
-        <button class="level-button start">Level 1</button>
-        <button class="level-button">Level 2</button>
-        <button class="level-button start">Level 3</button>
-        <button class="level-button">Level 4</button>
-        <button class="level-button start">Finish</button>
+        <div class="level-title">Stage 1:  History of Money</div>
+        <button class="level-button start"></button>
+        <button class="level-button"></button>
+        <button class="level-button start"></button>
+        <button class="level-button"></button>
+        <button class="level-button start"></button>
     </div>
     <div class="bottom-navigation">
         <div class="nav-box">
-            <a href="home.html">Home</a>
+            <a href="home.html">Home🏠</a>
         </div>
         <div class="nav-box">
-            <a href="dashboard.html">Dashboard</a>
+            <a href="dashboard.html">Dashboard🎛️</a>
         </div>
         <div class="nav-box">
-            <a href="awards.html">Awards</a>
+            <a href="awards.html">Awards🏆</a>
         </div>
         <div class="nav-box">
-            <a href="bot.html">Bot</a>
+            <a href="bot.html">Chatbot🤖</a>
         </div>
     </div>
     <script>
         function toggleRoadmap() {
             const roadmap = document.getElementById("roadmap");
             roadmap.style.display = roadmap.style.display === "none" ? "block" : "none";
-        }
-    </script>
-</body>
-</html>
+                      }
+                  </script>
+              </body>
+              </html>
+              
