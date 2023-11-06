@@ -256,16 +256,15 @@
 
     <!-- User Profile Visualization -->
     <div class="container" id="user-profile-visualization" style="display: none;">
-        <!-- MoneyBot Logo at the top middle -->
-        <div class="profile-picture">
-            <img src="OGMONEYBOTLOGO.PNG" alt="MoneyBot Logo">
-        </div>
-        <!-- Avatar Logo at the top right corner -->
-        <div class="profile-picture">
-            <img src="BronAvatar.png" alt="Avatar Logo">
+      <div id="moneybot-logo">
+        <img src="OGMONEYBOTLOGO.PNG" alt="MoneyBot Logo">
+
+    
+            <img src="BronAvatar.png" alt="Avatar Logo" style="width: 50px; height: 50px; border-radius: 50%;">
         </div>
 
         <h1 class="page-title">User Profile Visualization</h1>
+
 
 
       <!-- Rainy Day Fund -->
@@ -289,10 +288,9 @@
       <div class="section-box">
           <div class="section-header">
               <h2>XP Earned</h2>
+            <p class="last-30-days">(849)</p>
+            <p class="recent-accounts">($350.85)</p>
           </div>
-          <p class="xp-earned">XP earned</p>
-          <p class="last-30-days">849</p>
-          <p class="recent-accounts">$350.85</p>
       </div>
 
       <!-- Relevant Accounts -->
@@ -304,15 +302,23 @@
           <!-- Rainy Day Fund -->
           <div class="account-box">
               <p>Rainy Day</p>
-              <p class="account-amount">$365.00 +6%</p>
+            <div class="section-buttons">
+              <p class="account-amount">($365.00) (+6%)</p>
               <p class="account-change">(-$20.00)</p>
+              <button class="edit-add-button">Edit</button>
+              <button class="edit-add-button">Add</button>
+            </div>
           </div>
 
           <!-- Knee Surgery -->
           <div class="account-box">
               <p>Knee Surgery</p>
-              <p class="account-amount">$2,423.42 -12%</p>
+            <div class="section-buttons">
+              <p class="account-amount">($2,423.42) (-12%)</p>
               <p class="account-change">(-$12.00)</p>
+              <button class="edit-add-button">Edit</button>
+              <button class="edit-add-button">Add</button>
+            </div>
           </div>
       </div> 
 
@@ -324,17 +330,18 @@
           <div class="section-header">
               <h2>Next Activity</h2>
           </div>
+        <div class="section-buttons">
           <p>Activity Name (30 XP) ➡️</p>
+          <button class="edit-add-button">Edit</button>
+          <button class="edit-add-button">Add</button>
+        </div>   
       </div>
 
       <!-- Pay Off Credit Cards -->
       <div class="section-box">
           <div class="section-header">
               <h2>Pay Off Credit Cards</h2>
-              <div class="section-buttons">
-                  <button class="edit-add-button">Edit</button>
-                  <button class="edit-add-button">Add</button>
-              </div>
+            
           </div>
           <p class="short-term">Short term</p>
           <!-- Progress Bar -->
@@ -344,8 +351,8 @@
           <p class="progress">21%</p>
       </div>
 
-      <!-- Button to navigate to the gamified roadmap -->
-      <button id="goToRoadmapButton">Go to Roadmap</button>
+        <!-- Button to navigate to the gamified roadmap -->
+        <button id="goToRoadmapButton" class="input-field animated-btn">Go to Roadmap</button>
 
       <!-- JavaScript placed at the end of the HTML document -->
       <script>
