@@ -937,3 +937,32 @@
 .account-amount.positive span {
   color: green;
 }
+/* Banner-style navigation bar with individual boxes */
+.bottom-navigation {
+    background-color: #00ff99;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+
+nav-box {
+    background-color: black;
+    border: 2px solid #00ff99;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+nav-box a {
+    color: #00ff99;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav-box a:hover {
+    background-color: #00cc77;
+    color: black;
+}
