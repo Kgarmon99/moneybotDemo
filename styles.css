@@ -893,3 +893,16 @@
   width: 100%;
   height: 100%;
 }
+.user-stats {
+  text-align: left;
+}
+
+.xp {
+  color: blue; /* Make the text "XP" blue */
+}
+
+.user-stats img {
+  height: 40px;
+  width: auto;
+  vertical-align: middle;
+}
