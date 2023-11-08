@@ -238,40 +238,41 @@
 
 
       <!-- Accounts Dashboard -->
-      <div class="dashboard-item accounts-dashboard">
-          <div class="savings-dropdown">
-              <select id="account-type">
-                  <option value="savings">Savings</option>
-                  <option value="checking">Checking</option>
-                  <option value="debts">Debts</option>
-              </select>
-              <p class="account-balance">19.4k in savings</p>
-          </div>
-          <div class="account-chart">
-              <table>
-                  <tr>
-                      <th>Account</th>
-                      <th>Total</th>
-                      <th>Last 30 days</th>
-                  </tr>
-                  <tr>
-                      <td>Grad School</td>
-                      <td>$6.1k</td>
-                      <td>-5%</td>
-                  </tr>
-                  <tr>
-                      <td>Rainy Day Fund</td>
-                      <td>$365</td>
-                      <td>+6%</td>
-                  </tr>
-                  <tr>
-                      <td>Dream Car</td>
-                      <td>$2.4k</td>
-                      <td>+8%</td>
-                  </tr>
-              </table>
-          </div>
+    <div class="dashboard-item accounts-dashboard">
+      <div class="savings-dropdown">
+        <select id="account-type">
+          <option value="savings">Savings</option>
+          <option value="checking">Checking</option>
+          <option value="debts">Debts</option>
+        </select>
+        <p class="account-balance">19.4k in savings</p>
       </div>
+      <div class="account-chart">
+        <table>
+          <tr>
+            <th>Account</th>
+            <th>Total</th>
+            <th>Last 30 days</th>
+          </tr>
+          <tr>
+            <td>Grad School</td>
+            <td>$6.1k</td>
+            <td class="percentage negative">-5%</td>
+          </tr>
+          <tr>
+            <td>Rainy Day Fund</td>
+            <td>$365</td>
+            <td class="percentage positive">+6%</td>
+          </tr>
+          <tr>
+            <td>Dream Car</td>
+            <td>$2.4k</td>
+            <td class="percentage positive">+8%</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
 
     <!-- My Goals Section -->
     <!-- Personal Dashboard -->
@@ -326,9 +327,9 @@
       <!-- XP Earned -->
       <div class="section-box">
           <div class="section-header">
-              <h2>XP Earned</h2>
-            <p class="last-30-days">(849)</p>
-            <p class="recent-accounts">($350.85)</p>
+              <h2>XP Earned↗️</h2>
+            <p span="xp">(1,642 Out of 24,000)</p>
+           
           </div>
       </div>
 
@@ -336,30 +337,33 @@
       <div class="section-box">
           <div class="section-header">
               <h2>Relevant Accounts</h2>
+          
           </div>
 
-          <!-- Rainy Day Fund -->
+      <div class="rainy-day-fund">
+        <div class="account-box">
+          <p>Rainy Day☔️</p>
+          <div class="section-buttons">
+            <p class="account-change">($365.00)</p>
+            <p class="account-amount positive">(-20.00) (+6%)</p>
+            <button class="edit-add-button">Edit</button>
+            <button class="edit-add-button">Add</button>
+          </div>
+        </div>
+
+        <div class="knee-surgery">
           <div class="account-box">
-              <p>Rainy Day</p>
+            <p>Knee Surgery🩻</p>
             <div class="section-buttons">
-              <p class="account-amount">($365.00) (+6%)</p>
-              <p class="account-change">(-$20.00)</p>
+              <p class="account-change">($2,423.42)</p>
+              <p class="account-amount negative">(-$12.00) (-12%)</p>
               <button class="edit-add-button">Edit</button>
               <button class="edit-add-button">Add</button>
             </div>
           </div>
+        </div>
+      </div>
 
-          <!-- Knee Surgery -->
-          <div class="account-box">
-              <p>Knee Surgery</p>
-            <div class="section-buttons">
-              <p class="account-amount">($2,423.42) (-12%)</p>
-              <p class="account-change">(-$12.00)</p>
-              <button class="edit-add-button">Edit</button>
-              <button class="edit-add-button">Add</button>
-            </div>
-          </div>
-      </div> 
 
 
 
@@ -371,6 +375,8 @@
           </div>
         <div class="section-buttons">
           <p>Activity Name (30 XP) ➡️</p>
+        <div>
+      </div>
           <button class="edit-add-button">Edit</button>
           <button class="edit-add-button">Add</button>
         </div>   
@@ -380,6 +386,10 @@
       <div class="section-box">
           <div class="section-header">
               <h2>Pay Off Credit Cards</h2>
+            <div class="section-buttons">
+                <button class="edit-add-button">Edit</button>
+                <button class="edit-add-button">Add</button>
+            </div>
             
           </div>
           <p class="short-term">Short term</p>

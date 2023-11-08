@@ -906,3 +906,34 @@
   width: auto;
   vertical-align: middle;
 }
+.percentage {
+  font-weight: bold;
+}
+
+.percentage.negative {
+  color: red;
+}
+
+.percentage.positive {
+  color: #00ff99;
+  text-shadow: 0 0 2px #00ff99, 0 0 4px #00ff99;
+}
+.account-amount {
+  font-weight: bold;
+}
+
+.account-amount.negative {
+  color: red;
+}
+
+.account-amount.positive {
+  color: green;
+}
+
+.account-amount.negative span {
+  color: red;
+}
+
+.account-amount.positive span {
+  color: green;
+}
