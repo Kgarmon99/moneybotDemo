@@ -5,18 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>MoneyBot Gamified Page</title>
-    <style> 
-      
-        /* Add your CSS here */
-        body {
+    <style>
+        /* Reset default margin and padding */
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
             font-family: Arial, sans-serif;
             background-color: black;
             display: flex;
             flex-direction: column;
             align-items: center;
             min-height: 100vh;
+            margin: 0;
         }
 
         header {
@@ -27,11 +31,11 @@
             position: fixed;
             top: 0;
             z-index: 100;
-            background-color: black; /* Your color scheme */
+            background-color: black;
         }
 
         .app-title {
-            color: #00ff99; /* Your color scheme */
+            color: #00ff99;
             font-size: 20px;
             text-align: center;
             margin: 0;
@@ -45,13 +49,13 @@
         .icon {
             width: 30px;
             height: 30px;
-            background-color: #00ff99; /* Your color scheme */
+            background-color: #00ff99;
             border-radius: 50%;
         }
 
         .level-header {
-            background-color: #00ff99; /* Your color scheme */
-            color: black; /* Text color */
+            background-color: #00ff99;
+            color: black;
             font-size: 24px;
             padding: 10px;
             text-align: center;
@@ -61,105 +65,69 @@
 
         .roadmap {
             display: flex;
-            flex-direction: column;
+            flex-wrap: wrap;
             align-items: center;
-            margin-top: 60px; /* Create space for profile pics and text */
+            margin-top: 100px;
+            justify-content: center;
         }
 
-      .level-button {
-          background-color: black;
-          color: #00ff99;
-          border: 2px solid #00ff99;
-          padding: 10px 20px; /* Adjust the padding as needed */
-          border-radius: 50px;
-          cursor: pointer;
-          text-align: center;
-          font-size: 14px;
-          font-weight: bold;
-          display: inline-block;
-          position: relative;
-          margin: 10px; /* Add margin to separate buttons */
-          width: 100px; /* Adjust the width as needed */
-      }
+        .stage {
+            width: 33.33%;
+            background-color: #1a1a1a;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            position: relative;
+        }
 
-      .level-button::before {
-          content: '';
-          background-color: black;
-          position: absolute;
-          width: 100%;
-          height: 50%;
-          top: 0;
-          left: 0;
-          border-radius: 0 0 50% 50%; /* Create the backward "C" shape */
-      }
-
-      .level-button:hover::before {
-          background-color: #00ff99; /* Glowing green on hover */
-      }
-      }
-
-      .level-button:nth-child(1) {
-          margin-top: 0;
-          left: 10px;
-      }
-
-      .level-button:nth-child(2) {
-          margin-top: 70px; /* Shortened the distance between buttons */
-          left: 90px; /* Wider curve */
-      }
-
-      .level-button:nth-child(3) {
-          margin-top: 120px; /* Shortened the distance between buttons */
-          left: 140px; /* Wider curve */
-      }
-
-      .level-button:nth-child(4) {
-          margin-top: 180px; /* Shortened the distance between buttons */
-          left: 90px; /* Wider curve */
-      }
-
-      .level-button:nth-child(5) {
-          margin-top: 250px; /* Shortened the distance between buttons */
-          left: 40px; /* Wider curve */
-      }
-
-        .profile-pic {
-            width: 50px; /* Adjust size as needed */
-            height: 50px;
+        .stage-image {
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
-            position: fixed;
-            top: 10px;
-            right: 10px;
-            z-index: 101;
+            background-color: #00ff99;
+            margin: 0 auto;
         }
 
-        .moneybot-pic {
-            width: 50px; /* Adjust size as needed */
-            height: 50px;
-            border-radius: 50%;
-            position: fixed;
-            top: 10px;
-            left: 10px;
-            z-index: 101;
-        }
-
-        .fire-emoji {
-            width: 50px; /* Adjust size as needed */
-            height: 50px;
-            position: fixed;
-            top: 10px;
-            left: 10px;
-            z-index: 101;
-        }
-
-        .level-title {
-            color: #00ff99; /* Your color scheme */
+        .stage-title {
+            color: #00ff99;
             font-size: 16px;
+            text-align: center;
+            margin-top: 10px;
         }
 
-        /* Banner-style navigation bar with individual boxes */
+        .level-button {
+            background-color: #1a1a1a;
+            color: #00ff99;
+            border: 2px solid #00ff99;
+            border-radius: 20px;
+            padding: 10px 20px;
+            cursor: pointer;
+            text-align: center;
+            font-size: 14px;
+            font-weight: bold;
+            display: block;
+            margin: 10px auto;
+        }
+
+        .side-images {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+        }
+
+        .left-image {
+            left: 10px;
+        }
+
+        .right-image {
+            right: 10px;
+        }
+
         .bottom-navigation {
-            background-color: #00ff99; /* Your color scheme */
+            background-color: #00ff99;
             width: 100%;
             position: fixed;
             bottom: 0;
@@ -171,56 +139,74 @@
 
         .nav-box {
             background-color: black;
-            border: 2px solid #00ff99; /* Border */
+            border: 2px solid #00ff99;
             border-radius: 10px;
             padding: 5px;
             text-align: center;
         }
 
         .nav-box a {
-            color: #00ff99; /* Your color scheme */
+            color: #00ff99;
             text-decoration: none;
             font-weight: bold;
-        }
-
-        .nav-box a:hover {
-            background-color: #00cc77;
-            color: black;
         }
     </style>
 </head>
 <body>
     <header>
         <div class="top-icons">
-          
-            <img class="profile-pic" src="BronAvatar.png" alt="Profile Pic">
-            <img class="moneybot-pic" src="OGMONEYBOTLOGO.PNG" alt="Moneybot Pic">
+            <img class="icon" src="BronAvatar.png" alt="Profile Pic">
+            <img class="icon" src="OGMONEYBOTLOGO.PNG" alt="Moneybot Pic">
         </div>
+        <p class="app-title">RoadMap</p>
     </header>
-    <div class="level-header" onclick="toggleRoadmap()">
+    <div class="level-header">
         <p>LVL. 3: History of Money</p>
     </div>
-    <div class="roadmap" id="roadmap">
-        <div class="level-title">Stage 1:  History of Money</div>
-
-      <img id="Stock" src="Chart.jpeg" alt="Avatar Logo" style="width: 50px; height: 50px;">
-        <button class="level-button start">Go</button>
-        <button class="level-button">Go</button>
-      
-      <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px;">
-  <img id="Rocket" src="IMG_3086.png" alt="Avatar Logo" style="width:50 px; height: 50px;">
-          
-      </div>
-      
-        <button class="level-button start">Go</button>
-        <button class="level-button">Go</button>
-
-        <button class="level-button start">Go</button>
-        <button class="level-button start">Go</button>
+    <div class="roadmap">
+        <div class="stage">
+            <div class="stage-image"></div>
+            <div class="stage-title">Stage 1: History of Money</div>
+            <button class="level-button start">Go</button>
+        </div>
+        <div class="stage">
+            <div class="stage-image"></div>
+            <div class="stage-title">Stage 2: Finance Lingo </div>
+            <button class="level-button">Go</button>
+        </div>
+        <div class="stage">
+            <div class="stage-image"></div>
+            <div class="stage-title">Stage 3: Budgeting Basics </div>
+            <button class="level-button start">Go</button>
+        </div>
+        <div class="stage">
+            <div class="stage-image"></div>
+            <div class="stage-title">Stage 4: Debt Management </div>
+            <button class="level-button">Go</button>
+        </div>
+        <div class="stage">
+            <div class="stage-image"></div>
+            <div class="stage-title">Stage 5: Credit and Credit Score</div>
+            <button class="level-button start">Go</button>
+        </div>
+        <div class="stage">
+            <div class="stage-image"></div>
+            <div class="stage-title">Stage 6: Financial Tools and Technology</div>
+            <button class="level-button">Go</button>
+        </div>
+        <div class="stage">
+            <div class="stage-image"></div>
+            <div class="stage-title">Stage 7: Taxes and Tax Planning </div>
+            <button class="level-button start">Go</button>
+        </div>
+        <div class="stage">
+            <div class="stage-image"></div>
+            <div class="stage-title">Stage 8: Risk Management and Insurance </div>
+            <button class="level-button">Go</button>
+        </div>
     </div>
-
- 
-
+    <img class="side-images left-image" src="Rocket.png" alt="Rocket">
+    <img class="side-images right-image" src="MoneyStack.jpg" alt="Dollar Stack">
     <div class="bottom-navigation">
         <div class="nav-box">
             <a href="home.html">Home🏠</a>
@@ -231,16 +217,9 @@
         <div class="nav-box">
             <a href="awards.html">Awards🏆</a>
         </div>
-      <div class="nav-box">
-          <a href="chatbot.html">Bot</a> <!-- Change the href to "chatbot.html" -->
-      </div>
+        <div class="nav-box">
+            <a href="chatbot.html">Bot</a>
+        </div>
     </div>
-    <script>
-        function toggleRoadmap() {
-            const roadmap = document.getElementById("roadmap");
-            roadmap.style.display = roadmap.style.display === "none" ? "block" : "none";
-                      }
-                  </script>
-              </body>
-              </html>
-              
+</body>
+</html>
