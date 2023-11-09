@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>MoneyBot Gamified Page</title>
     <style>
         /* Reset default margin and padding */
         * {
@@ -41,6 +41,16 @@
             font-size: 20px;
             text-align: center;
             margin: 0;
+            animation: glow 1.5s ease-in-out infinite alternate; /* Added animation */
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px #00ff99, 0 0 20px #00ff99, 0 0 30px #00ff99;
+            }
+            to {
+                text-shadow: 0 0 20px #00ff99, 0 0 30px #00ff99, 0 0 40px #00ff99;
+            }
         }
 
         .top-icons {
@@ -74,32 +84,40 @@
         }
 
         .stage {
-            width: 80%;
+            width: 150px;
+            height: 150px;
             background-color: #1a1a1a;
-            border-radius: 10px;
+            border: 5px solid #00ff99; /* Bright green border */
+            border-radius: 50%;
             padding: 20px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             margin: 10px 0;
             position: relative;
             transition: transform 0.3s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly; /* Vertically center content */
+            align-items: center;
         }
 
-        /* Add margin-right and margin-left to create a winding path effect */
         .stage:nth-child(odd) {
             margin-right: 40px;
         }
 
-        /* Add margin-right and margin-left to create a winding path effect */
         .stage:nth-child(even) {
             margin-left: 40px;
         }
 
         .stage-image {
-            width: 100px;
-            height: 100px;
+            width: 100%;
+            height: 70%;
             border-radius: 50%;
             background-color: #00ff99;
             margin: 0 auto 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden; /* Hide overflow to keep a perfect circle */
         }
 
         .stage-title {
@@ -114,13 +132,17 @@
             color: #00ff99;
             border: 2px solid #00ff99;
             border-radius: 20px;
-            padding: 10px 20px;
+            padding: 12px 24px; /* Increased button size */
             cursor: pointer;
             text-align: center;
             font-size: 14px;
             font-weight: bold;
-            display: block;
-            margin: 10px auto;
+            margin-top: 10px;
+        }
+
+        .stage:hover {
+            border-color: #00ff99;
+            box-shadow: 0 0 10px #00ff99;
         }
 
         .side-images {
@@ -145,7 +167,7 @@
             position: fixed;
             bottom: 0;
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
             padding: 10px 0;
             z-index: 100;
         }
@@ -165,59 +187,60 @@
         }
     </style>
 </head>
+
 <body>
-    <header> style="display: flex; align-items: center;">
+    <header style="display: flex; align-items: center;">
         <div class="top-icons">
             <img class="icon" src="BronAvatar.png" alt="Profile Pic">
             <img class="icon" src="OGMONEYBOTLOGO.PNG" alt="Moneybot Pic">
         </div>
-        <p class="app-title">RoadMap</p>
+        <p class="app-title">LVL. 1: History of Money</p>
     </header>
-    <div class="level-header">
+        <div class="level-header">
         <p>LVL. 3: History of Money</p>
+       </div>
+    <div class="roadmap">
+        <div class="stage">
+            <img class="stage-image" src="HistoryMoney.jpg" alt="Stage 1 Image">
+            <div class="stage-title">Stage 1: Barter Beginnings📈</div>
+            <button class="level-button start">Go</button>
+        </div>
+        <div class="stage">
+            <img class="stage-image" src="MoneyTerms.png" alt="Stage 2 Image">
+            <div class="stage-title">Stage 2: The Birth of Currency🪙 </div>
+            <button class="level-button">Go</button>
+        </div>
+        <div class="stage">
+            <img class="stage-image" src="BudgetingIcon.jpeg" alt="Stage 3 Image">
+            <div class="stage-title">Stage 3: Ancient Coins and Empires👑 </div>
+            <button class="level-button start">Go</button>
+        </div>
+        <div class="stage">
+            <img class="stage-image" src="DebtIcon.png" alt="Stage 4 Image">
+            <div class="stage-title">Stage 4: Paper Money Revolution 💸</div>
+            <button class="level-button">Go</button>
+        </div>
+        <div class="stage">
+            <img class="stage-image" src="CreditCard.png" alt="Stage 5 Image">
+            <div class="stage-title">Stage 5: Medieval Banking and Innovation🏦</div>
+            <button class="level-button start">Go</button>
+        </div>
+        <div class="stage">
+            <img class="stage-image" src="FinancialToolsandTechnology.png" alt="Stage 6 Image">
+            <div class="stage-title">Stage 6: Renaissance Finance👨🏽‍🎨</div>
+            <button class="level-button">Go</button>
+        </div>
+        <div class="stage">
+            <img class="stage-image" src="Taxes.png" alt="Stage 7 Image">
+            <div class="stage-title">Stage 7: Colonial Currencies and Trade🌎 </div>
+            <button class="level-button start">Go</button>
+        </div>
+        <div class="stage">
+            <img class="stage-image" src="InsuranceIcon.png" alt="Stage 8 Image">
+            <div class="stage-title">Final Stage :Current Banking Systems 🌐 </div>
+            <button class="level-button">Go</button>
+        </div>
     </div>
-  <div class="roadmap">
-      <div class="stage">
-          <img class="stage-image" src="HistoryMoney.jpg" alt="Stage 1 Image">
-          <div class="stage-title">Stage 1: History of Money</div>
-          <button class="level-button start">Go</button>
-      </div>
-      <div class="stage">
-          <img class="stage-image" src="MoneyTerms.png" alt="Stage 2 Image">
-          <div class="stage-title">Stage 2: Finance Lingo </div>
-          <button class="level-button">Go</button>
-      </div>
-      <div class="stage">
-          <img class="stage-image" src="BudgetingIcon.jpeg" alt="Stage 3 Image">
-          <div class="stage-title">Stage 3: Budgeting Basics </div>
-          <button class="level-button start">Go</button>
-      </div>
-      <div class="stage">
-          <img class="stage-image" src="DebtIcon.png" alt="Stage 4 Image">
-          <div class="stage-title">Stage 4: Debt Management </div>
-          <button class="level-button">Go</button>
-      </div>
-      <div class="stage">
-          <img class="stage-image" src="CreditCard.png" alt="Stage 5 Image">
-          <div class="stage-title">Stage 5: Credit and Credit Score</div>
-          <button class="level-button start">Go</button>
-      </div>
-      <div class="stage">
-          <img class="stage-image" src="FinancialToolsandTechnology.png" alt="Stage 6 Image">
-          <div class="stage-title">Stage 6: Financial Tools and Technology</div>
-          <button class="level-button">Go</button>
-      </div>
-      <div class="stage">
-          <img class="stage-image" src="Taxes.png" alt="Stage 7 Image">
-          <div class="stage-title">Stage 7: Taxes and Tax Planning </div>
-          <button class="level-button start">Go</button>
-      </div>
-      <div class="stage">
-          <img class="stage-image" src="InsuranceIcon.png" alt="Stage 8 Image">
-          <div class="stage-title">Stage 8: Risk Management and Insurance </div>
-          <button class="level-button">Go</button>
-      </div>
-  </div>
 
     <img class="side-images left-image" src="Rocket.png" alt="Rocket">
     <img class="side-images right-image" src="MoneyStack.jpg" alt="Dollar Stack">
@@ -237,4 +260,5 @@
         </div>
     </div>
 </body>
+
 </html>
