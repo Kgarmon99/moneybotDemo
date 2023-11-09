@@ -6,25 +6,24 @@
     <link rel="stylesheet" href="styles.css">
     <title>MoneyBot Gamified Page</title>
     <style>
-      /* Reset default margin and padding */
-      * {
-          margin: 0;
-          padding: 0;
-          box-sizing: border-box;
-      }
+        /* Reset default margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-      body {
-          max-width: 500px; /* Adjust the max-width as needed */
-          margin: 0 auto; /* Center the content */
-          padding: 10px; /* Add padding for spacing */
-          font-family: Arial, sans-serif;
-          background-color: black;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          min-height: 100vh;
-      }
-
+        body {
+            max-width: 500px; /* Adjust the max-width as needed */
+            margin: 0 auto; /* Center the content */
+            padding: 10px; /* Add padding for spacing */
+            font-family: Arial, sans-serif;
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
 
         header {
             display: flex;
@@ -68,20 +67,32 @@
 
         .roadmap {
             display: flex;
-            flex-wrap: wrap;
+            flex-direction: column;
             align-items: center;
-            margin-top: 100px;
             justify-content: center;
+            margin-top: 100px;
         }
 
         .stage {
-            width: 33.33%;
+            width: 80%;
             background-color: #1a1a1a;
             border-radius: 10px;
             padding: 20px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            margin: 10px;
+            margin: 10px 0;
             position: relative;
+            transform-origin: center bottom;
+            transition: transform 0.3s;
+        }
+
+        /* Add translateY to create a zigzag effect */
+        .stage:nth-child(odd) {
+            transform: translateY(20px);
+        }
+
+        /* Add translateY to create a zigzag effect */
+        .stage:nth-child(even) {
+            transform: translateY(-20px);
         }
 
         .stage-image {
@@ -89,7 +100,7 @@
             height: 100px;
             border-radius: 50%;
             background-color: #00ff99;
-            margin: 0 auto;
+            margin: 0 auto 10px;
         }
 
         .stage-title {
@@ -210,8 +221,8 @@
     </div>
     <img class="side-images left-image" src="Rocket.png" alt="Rocket">
     <img class="side-images right-image" src="MoneyStack.jpg" alt="Dollar Stack">
- 
-      <div class="bottom-navigation">
+
+    <div class="bottom-navigation">
         <div class="nav-box">
             <a href="index.html">🏠</a>
         </div>
@@ -224,6 +235,6 @@
         <div class="nav-box">
             <a href="chatbot.html">🤖</a>
         </div>
-      </div>
+    </div>
 </body>
 </html>
