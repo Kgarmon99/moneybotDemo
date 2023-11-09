@@ -946,9 +946,11 @@
     display: flex;
     justify-content: space-around;
     padding: 10px 0;
+    left: 0px
+   
 }
 
-nav-box {
+.nav-box {
     background-color: black;
     border: 2px solid #00ff99;
     border-radius: 10px;
@@ -956,13 +958,13 @@ nav-box {
     text-align: center;
 }
 
-nav-box a {
+.nav-box a {
     color: #00ff99;
     text-decoration: none;
     font-weight: bold;
 }
 
-nav-box a:hover {
+.nav-box a:hover {
     background-color: #00cc77;
     color: black;
 }
