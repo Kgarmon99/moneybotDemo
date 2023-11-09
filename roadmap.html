@@ -81,18 +81,17 @@
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             margin: 10px 0;
             position: relative;
-            transform-origin: center bottom;
             transition: transform 0.3s;
         }
 
-        /* Add translateY to create a zigzag effect */
+        /* Add margin-right and margin-left to create a winding path effect */
         .stage:nth-child(odd) {
-            transform: translateY(20px);
+            margin-right: 40px;
         }
 
-        /* Add translateY to create a zigzag effect */
+        /* Add margin-right and margin-left to create a winding path effect */
         .stage:nth-child(even) {
-            transform: translateY(-20px);
+            margin-left: 40px;
         }
 
         .stage-image {
@@ -177,48 +176,49 @@
     <div class="level-header">
         <p>LVL. 3: History of Money</p>
     </div>
-    <div class="roadmap">
-        <div class="stage">
-            <div class="stage-image"></div>
-            <div class="stage-title">Stage 1: History of Money</div>
-            <button class="level-button start">Go</button>
-        </div>
-        <div class="stage">
-            <div class="stage-image"></div>
-            <div class="stage-title">Stage 2: Finance Lingo </div>
-            <button class="level-button">Go</button>
-        </div>
-        <div class="stage">
-            <div class="stage-image"></div>
-            <div class="stage-title">Stage 3: Budgeting Basics </div>
-            <button class="level-button start">Go</button>
-        </div>
-        <div class="stage">
-            <div class="stage-image"></div>
-            <div class="stage-title">Stage 4: Debt Management </div>
-            <button class="level-button">Go</button>
-        </div>
-        <div class="stage">
-            <div class="stage-image"></div>
-            <div class="stage-title">Stage 5: Credit and Credit Score</div>
-            <button class="level-button start">Go</button>
-        </div>
-        <div class="stage">
-            <div class="stage-image"></div>
-            <div class="stage-title">Stage 6: Financial Tools and Technology</div>
-            <button class="level-button">Go</button>
-        </div>
-        <div class="stage">
-            <div class="stage-image"></div>
-            <div class="stage-title">Stage 7: Taxes and Tax Planning </div>
-            <button class="level-button start">Go</button>
-        </div>
-        <div class="stage">
-            <div class="stage-image"></div>
-            <div class="stage-title">Stage 8: Risk Management and Insurance </div>
-            <button class="level-button">Go</button>
-        </div>
-    </div>
+  <div class="roadmap">
+      <div class="stage">
+          <img class="stage-image" src="HistoryOfMoney.png" alt="Stage 1 Image">
+          <div class="stage-title">Stage 1: History of Money</div>
+          <button class="level-button start">Go</button>
+      </div>
+      <div class="stage">
+          <img class="stage-image" src="FinanceLingo.png" alt="Stage 2 Image">
+          <div class="stage-title">Stage 2: Finance Lingo </div>
+          <button class="level-button">Go</button>
+      </div>
+      <div class="stage">
+          <img class="stage-image" src="BudgetingBasics.png" alt="Stage 3 Image">
+          <div class="stage-title">Stage 3: Budgeting Basics </div>
+          <button class="level-button start">Go</button>
+      </div>
+      <div class="stage">
+          <img class="stage-image" src="DebtManagement.png" alt="Stage 4 Image">
+          <div class="stage-title">Stage 4: Debt Management </div>
+          <button class="level-button">Go</button>
+      </div>
+      <div class="stage">
+          <img class="stage-image" src="CreditandCreditScore.png" alt="Stage 5 Image">
+          <div class="stage-title">Stage 5: Credit and Credit Score</div>
+          <button class="level-button start">Go</button>
+      </div>
+      <div class="stage">
+          <img class="stage-image" src="FinancialToolsandTechnology.png" alt="Stage 6 Image">
+          <div class="stage-title">Stage 6: Financial Tools and Technology</div>
+          <button class="level-button">Go</button>
+      </div>
+      <div class="stage">
+          <img class="stage-image" src="TaxesandTaxPlanning.png" alt="Stage 7 Image">
+          <div class="stage-title">Stage 7: Taxes and Tax Planning </div>
+          <button class="level-button start">Go</button>
+      </div>
+      <div class="stage">
+          <img class="stage-image" src="RiskManagement.png" alt="Stage 8 Image">
+          <div class="stage-title">Stage 8: Risk Management and Insurance </div>
+          <button class="level-button">Go</button>
+      </div>
+  </div>
+
     <img class="side-images left-image" src="Rocket.png" alt="Rocket">
     <img class="side-images right-image" src="MoneyStack.jpg" alt="Dollar Stack">
 
