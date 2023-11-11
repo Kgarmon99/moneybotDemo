@@ -36,7 +36,7 @@
             height: 1000px; /* Adjust as needed */
             display: flex;
             flex-direction: column;
-            align-items: center; /* Center content horizontally */
+            align-items: flex-end; /* Align content to the right */
         }
 
         .profile-picture {
@@ -44,11 +44,24 @@
             height: 50px; /* Adjust as needed */
             border-radius: 50%;
             overflow: hidden;
-            border: 2px solid #00ff99;
             box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+            margin-bottom: 20px;
         }
 
         .profile-picture img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .logo {
+            width: 50px; /* Adjust as needed */
+            height: 50px; /* Adjust as needed */
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .logo img {
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -92,6 +105,12 @@
         .matched {
             background-color: #00ff00 !important;
             cursor: default;
+            box-shadow: none;
+        }
+
+        .incorrect-match {
+            background-color: #ff0000 ;
+            
         }
 
         /* Modal Styles */
@@ -139,11 +158,6 @@
             font-size: 24px;
             text-decoration: none;
         }
-
-        .logo img {
-            width: 150px; /* Adjust the size of the logo */
-            height: auto; /* Maintain aspect ratio */
-        }
     </style>
 </head>
 <body>
@@ -151,7 +165,7 @@
         <div class="top-bar">
             <div class="profile-picture">
                 <!-- Profile picture here -->
-                <img src="YOUR_PROFILE_PICTURE_URL" alt="Profile">
+                <img src="BronAvatar.png" alt="Profile">
             </div>
             <div class="logo">
                 <!-- MoneyBot logo here -->
@@ -179,30 +193,27 @@
 
             <!-- Definition Boxes -->
             <div class="definition-box" onclick="revealTerm(this)">
-                <div class="definition-box-title">The amount of money you owe</div>
+                <div class="definition-box-title">Money owed</div>
             </div>
             <div class="definition-box" onclick="revealTerm(this)">
-                <div class="definition-box-title">Your ability to borrow money</div>
+                <div class="definition-box-title">Financial trustworthiness</div>
             </div>
             <div class="definition-box" onclick="revealTerm(this)">
-                <div class="definition-box-title">Money taken directly from your account</div>
+                <div class="definition-box-title">Electronic payment</div>
             </div>
             <div class="definition-box" onclick="revealTerm(this)">
-                <div class="definition-box-title">Credit score measuring creditworthiness</div>
+                <div class="definition-box-title">Credit score</div>
             </div>
         </div>
-    </div>
 
-    <!-- Completion Modal -->
-    <div class="completion-modal" id="completionModal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <h2>Congratulations!</h2>
-            <p>You've successfully completed the Finance Matching Game!</p>
-            <p>Claim your reward and share your achievement:</p>
-            <!-- Add more elements/buttons for rewards or sharing options -->
-            <button onclick="claimReward()">Claim Reward</button>
-            <button onclick="shareAchievement()">Share Achievement</button>
+        <!-- Completion Modal -->
+        <div id="completionModal" class="completion-modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <p>Congratulations! You've completed the Finance Matching Game!</p>
+                <button onclick="claimReward()">Claim Reward</button>
+                <button onclick="shareAchievement()">Share Achievement</button>
+            </div>
         </div>
     </div>
 
@@ -265,21 +276,33 @@
                 rewardUser(); // Reward the user for each correct match
             } else {
                 // Not matched
+                termBoxes.forEach(termBox => {
+                    if (revealed.includes(termBox.querySelector('.term-box-title').textContent)) {
+                        termBox.classList.add('incorrect-match');
+                    }
+                });
+
+                definitionBoxes.forEach(definitionBox => {
+                    if (revealed.includes(definitionBox.querySelector('.definition-box-title').textContent)) {
+                        definitionBox.classList.add('incorrect-match');
+                    }
+                });
+
                 locked = true;
                 setTimeout(() => {
-                    termBoxes.forEach(box => {
-                        if (!box.classList.contains('matched')) {
-                            box.style.backgroundColor = "black";
-                        }
+                    termBoxes.forEach(termBox => {
+                        termBox.style.backgroundColor = "black";
+                        termBox.classList.remove('incorrect-match');
                     });
-                    definitionBoxes.forEach(box => {
-                        if (!box.classList.contains('matched')) {
-                            box.style.backgroundColor = "black";
-                        }
+
+                    definitionBoxes.forEach(definitionBox => {
+                        definitionBox.style.backgroundColor = "black";
+                        definitionBox.classList.remove('incorrect-match');
                     });
+
                     revealed = [];
                     locked = false;
-                }, 500);
+                }, 1000);
             }
 
             revealed = [];
