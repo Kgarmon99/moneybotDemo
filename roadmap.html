@@ -54,8 +54,7 @@
         }
 
         .top-icons {
-            display: flex;
-            align-items: center;
+            position: relative;
         }
 
         .icon {
@@ -63,6 +62,9 @@
             height: 30px;
             background-color: #00ff99;
             border-radius: 50%;
+            position: absolute;
+            top:0px;
+            right:0px;
         }
 
         .level-header {
@@ -101,11 +103,11 @@
         }
 
         .stage:nth-child(odd) {
-            margin-right: 50px;
+            margin-right: 200px;
         }
 
         .stage:nth-child(even) {
-            margin-left: 50px;
+            margin-left: 200px;
         }
 
         .stage-image {
@@ -131,10 +133,11 @@
             background-color: #1a1a1a;
             color: #00ff99;
             border: 2px solid #00ff99;
-            border-radius: 20px;
-            padding: 12px 24px; /* Increased button size */
+            border-radius: 40px;
+            padding: 20px 40px; /* Increased button size */
             cursor: pointer;
-            text-align: center;
+            text-align: middle;
+            vertical-align: middle;
             font-size: 14px;
             font-weight: bold;
             margin-top: 10px;
@@ -146,7 +149,7 @@
         }
 
         .side-images {
-            position: fixed;
+            position: static;
             top: 50%;
             transform: translateY(-50%);
             width: 50px;
@@ -191,54 +194,56 @@
 <body>
     <header style="display: flex; align-items: center;">
         <div class="top-icons">
-            <img class="icon" src="BronAvatar.png" alt="Profile Pic">
-            <img class="icon" src="OGMONEYBOTLOGO.PNG" alt="Moneybot Pic">
+          <img class="icon" src="OGMONEYBOTLOGO.PNG" alt="Moneybot Pic">
+          </div>
+            <img class="icon" src="BronAvatar.png" align="right";"> alt="Profile Pic">
         </div>
-        <p class="app-title">LVL. 1: History of Money</p>
+            
+        <p class="app-title">LVL 1: History of Money</p>
     </header>
         <div class="level-header">
-        <p>LVL. 3: History of Money</p>
+        <h2>LVL 1: History of Money</h2>
        </div>
     <div class="roadmap">
         <div class="stage">
             <img class="stage-image" src="HistoryMoney.jpg" alt="Stage 1 Image">
             <div class="stage-title">Stage 1: Barter Beginnings📈</div>
-            <button class="level-button start">Go</button>
+            <button class="level-button start">GO!</button>
         </div>
         <div class="stage">
             <img class="stage-image" src="MoneyTerms.png" alt="Stage 2 Image">
             <div class="stage-title">Stage 2: The Birth of Currency🪙 </div>
-            <button class="level-button">Go</button>
+            <button class="level-button">🔒</button>
         </div>
         <div class="stage">
             <img class="stage-image" src="BudgetingIcon.jpeg" alt="Stage 3 Image">
             <div class="stage-title">Stage 3: Ancient Coins and Empires👑 </div>
-            <button class="level-button start">Go</button>
+            <button class="level-button start">🔒</button>
         </div>
         <div class="stage">
             <img class="stage-image" src="DebtIcon.png" alt="Stage 4 Image">
             <div class="stage-title">Stage 4: Paper Money Revolution 💸</div>
-            <button class="level-button">Go</button>
+            <button class="level-button">🔒</button>
         </div>
         <div class="stage">
             <img class="stage-image" src="CreditCard.png" alt="Stage 5 Image">
             <div class="stage-title">Stage 5: Medieval Banking and Innovation🏦</div>
-            <button class="level-button start">Go</button>
+            <button class="level-button start">🔒</button>
         </div>
         <div class="stage">
             <img class="stage-image" src="FinancialToolsandTechnology.png" alt="Stage 6 Image">
             <div class="stage-title">Stage 6: Renaissance Finance👨🏽‍🎨</div>
-            <button class="level-button">Go</button>
+            <button class="level-button">🔒</button>
         </div>
         <div class="stage">
             <img class="stage-image" src="Taxes.png" alt="Stage 7 Image">
             <div class="stage-title">Stage 7: Colonial Currencies and Trade🌎 </div>
-            <button class="level-button start">Go</button>
+            <button class="level-button start">🔒</button>
         </div>
         <div class="stage">
             <img class="stage-image" src="InsuranceIcon.png" alt="Stage 8 Image">
             <div class="stage-title">Final Stage :Current Banking Systems 🌐 </div>
-            <button class="level-button">Go</button>
+            <button class="level-button">🔒</button>
         </div>
     </div>
 
@@ -253,7 +258,7 @@
             <a href="Game.html">🗺️</a>
         </div>
         <div class="nav-box">
-            <a href="TrophyRoom.html>🏆</a>
+            <a href="TrophyRoom.html">🏆</a>
         </div>
         <div class="nav-box">
             <a href="chatbot.html">🤖</a>
