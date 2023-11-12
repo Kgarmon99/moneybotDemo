@@ -40,8 +40,8 @@
         }
 
         .profile-picture {
-            width: 50px; /* Adjust as needed */
-            height: 50px; /* Adjust as needed */
+            width: 70px; /* Increased size for better visibility */
+            height: 70px; /* Increased size for better visibility */
             border-radius: 50%;
             overflow: hidden;
             box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
@@ -55,8 +55,8 @@
         }
 
         .logo {
-            width: 50px; /* Adjust as needed */
-            height: 50px; /* Adjust as needed */
+            width: 70px; /* Increased size for better visibility */
+            height: 70px; /* Increased size for better visibility */
             overflow: hidden;
             margin-bottom: 20px;
         }
@@ -68,9 +68,10 @@
         }
 
         .page-title {
-            font-size: 24px;
+            font-size: 32px; /* Larger font size for emphasis */
             font-weight: bold;
             margin-bottom: 20px;
+            text-align: center; /* Center the title */
         }
 
         .matching-game-container {
@@ -86,18 +87,20 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
-            transition: box-shadow 0.3s ease;
+            transition: box-shadow 0.3s ease, transform 0.3s ease; /* Added transform transition */
             border: 2px solid #00ff99;
             text-align: center;
             cursor: pointer;
+            font-size: 18px; /* Increased font size for better readability */
         }
 
         .term-box:hover, .definition-box:hover {
             box-shadow: 0 0 20px rgba(0, 255, 0, 0.8);
+            transform: scale(1.05); /* Enlarge box on hover for a more interactive feel */
         }
 
         .term-box-title, .definition-box-title {
-            font-size: 18px;
+            font-size: 20px; /* Increased font size for better readability */
             font-weight: bold;
             margin-bottom: 10px;
         }
@@ -106,11 +109,12 @@
             background-color: #00ff00 !important;
             cursor: default;
             box-shadow: none;
+            transform: scale(1.1); /* Enlarge matched box for emphasis */
         }
 
         .incorrect-match {
             background-color: #ff0000 ;
-            
+            transform: rotate(10deg); /* Add rotation effect for incorrect match */
         }
 
         /* Modal Styles */
@@ -177,171 +181,172 @@
 
         <!-- Matching Game Grid -->
         <div class="matching-game-container">
-            <!-- Term Boxes -->
-            <div class="term-box" onclick="revealDefinition(this)">
-                <div class="term-box-title">Debt</div>
-            </div>
-            <div class="term-box" onclick="revealDefinition(this)">
-                <div class="term-box-title">Credit</div>
-            </div>
-            <div class="term-box" onclick="revealDefinition(this)">
-                <div class="term-box-title">Debit</div>
-            </div>
-            <div class="term-box" onclick="revealDefinition(this)">
-                <div class="term-box-title">FICO</div>
-            </div>
+                      <!-- Term Boxes -->
+                      <div class="term-box" onclick="revealDefinition(this)">
+                          <div class="term-box-title">Asset</div>
+                      </div>
+                      <div class="term-box" onclick="revealDefinition(this)">
+                          <div class="term-box-title">Earn interest on interest for exponential growth</div>
+                      </div>
+                      <div class="term-box" onclick="revealDefinition(this)">
+                          <div class="term-box-title">Budget</div>
+                      </div>
+                      <div class="term-box" onclick="revealDefinition(this)">
+                          <div class="term-box-title">Ownership share in a company</div>
+                      </div>
 
-            <!-- Definition Boxes -->
-            <div class="definition-box" onclick="revealTerm(this)">
-                <div class="definition-box-title">Money owed</div>
-            </div>
-            <div class="definition-box" onclick="revealTerm(this)">
-                <div class="definition-box-title">Financial trustworthiness</div>
-            </div>
-            <div class="definition-box" onclick="revealTerm(this)">
-                <div class="definition-box-title">Electronic payment</div>
-            </div>
-            <div class="definition-box" onclick="revealTerm(this)">
-                <div class="definition-box-title">Credit score</div>
-            </div>
-        </div>
+                      <!-- Definition Boxes -->
+                      <div class="definition-box" onclick="revealTerm(this)">
+                          <div class="definition-box-title">Stock</div>
+                      </div>
+                      <div class="definition-box" onclick="revealTerm(this)">
+                          <div class="definition-box-title">Valuable item convertible to cash</div>
+                      </div>
+                      <div class="definition-box" onclick="revealTerm(this)">
+                          <div class="definition-box-title">Compound</div>
+                      </div>
+                      <div class="definition-box" onclick="revealTerm(this)">
+                          <div class="definition-box-title">A Plan for income & expenses</div>
+                      </div>
+                  </div>
 
-        <!-- Completion Modal -->
-        <div id="completionModal" class="completion-modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal()">&times;</span>
-                <p>Congratulations! You've completed the Finance Matching Game!</p>
-                <button onclick="claimReward()">Claim Reward</button>
-                <button onclick="shareAchievement()">Share Achievement</button>
-            </div>
-        </div>
-    </div>
+                  <!-- Completion Modal -->
+                  <div id="completionModal" class="completion-modal">
+                      <div class="modal-content">
+                          <span class="close" onclick="closeModal()">&times;</span>
+                          <p>Congratulations! You've completed the Finance Matching Game!</p>
+                          <button onclick="claimReward()">Claim Reward</button>
+                          <button onclick="shareAchievement()">Share Achievement</button>
+                      </div>
+                  </div>
+              </div>
 
-    <!-- Bottom Navigation -->
-    <div class="bottom-navigation">
-        <div class="nav-box">
-            <a href="index.html">🏠</a>
-        </div>
-        <div class="nav-box">
-            <a href="roadmap.html">🗺️</a>
-        </div>
-        <div class="nav-box">
-            <a href="Game.html">🏆</a>
-        </div>
-        <div class="nav-box">
-            <a href="chatbot.html">🤖</a>
-        </div>
-    </div>
+              <!-- Bottom Navigation -->
+              <div class="bottom-navigation">
+                  <div class="nav-box">
+                      <a href="index.html">🏠</a>
+                  </div>
+                  <div class="nav-box">
+                      <a href="roadmap.html">🗺️</a>
+                  </div>
+                  <div class="nav-box">
+                      <a href="Game.html">🏆</a>
+                  </div>
+                  <div class="nav-box">
+                      <a href="chatbot.html">🤖</a>
+                  </div>
+              </div>
 
-    <script>
-        let revealed = [];
-        let locked = false;
+              <script>
+                  let revealed = [];
+                  let locked = false;
 
-        function revealDefinition(box) {
-            if (locked || box.classList.contains('matched')) return;
-            box.style.backgroundColor = "#00ff00";
-            revealed.push(box.querySelector('.term-box-title').textContent);
-            if (revealed.length === 2) {
-                setTimeout(checkMatch, 500);
-            }
-        }
+                  function revealDefinition(box) {
+                      if (locked || box.classList.contains('matched')) return;
+                      box.style.backgroundColor = "#00ff00";
+                      revealed.push(box.querySelector('.term-box-title').textContent);
+                      if (revealed.length === 2) {
+                          setTimeout(checkMatch, 500);
+                      }
+                  }
 
-        function revealTerm(box) {
-            if (locked || box.classList.contains('matched')) return;
-            box.style.backgroundColor = "#00ff00";
-            revealed.push(box.querySelector('.definition-box-title').textContent);
-            if (revealed.length === 2) {
-                setTimeout(checkMatch, 500);
-            }
-        }
+                  function revealTerm(box) {
+                      if (locked || box.classList.contains('matched')) return;
+                      box.style.backgroundColor = "#00ff00";
+                      revealed.push(box.querySelector('.definition-box-title').textContent);
+                      if (revealed.length === 2) {
+                          setTimeout(checkMatch, 500);
+                      }
+                  }
 
-        function checkMatch() {
-            const [first, second] = revealed;
-            const termBoxes = document.querySelectorAll('.term-box');
-            const definitionBoxes = document.querySelectorAll('.definition-box');
+                  function checkMatch() {
+                      const [first, second] = revealed;
+                      const termBoxes = document.querySelectorAll('.term-box');
+                      const definitionBoxes = document.querySelectorAll('.definition-box');
 
-            if (first === second) {
-                // Matched
-                termBoxes.forEach(box => {
-                    if (revealed.includes(box.querySelector('.term-box-title').textContent)) {
-                        box.classList.add('matched');
-                    }
-                });
+                      if (first === second) {
+                          // Matched
+                          termBoxes.forEach(box => {
+                              if (revealed.includes(box.querySelector('.term-box-title').textContent)) {
+                                  box.classList.add('matched');
+                              }
+                          });
 
-                definitionBoxes.forEach(box => {
-                    if (revealed.includes(box.querySelector('.definition-box-title').textContent)) {
-                        box.classList.add('matched');
-                    }
-                });
-                rewardUser(); // Reward the user for each correct match
-            } else {
-                // Not matched
-                termBoxes.forEach(termBox => {
-                    if (revealed.includes(termBox.querySelector('.term-box-title').textContent)) {
-                        termBox.classList.add('incorrect-match');
-                    }
-                });
+                          definitionBoxes.forEach(box => {
+                              if (revealed.includes(box.querySelector('.definition-box-title').textContent)) {
+                                  box.classList.add('matched');
+                              }
+                          });
+                          rewardUser(); // Reward the user for each correct match
+                      } else {
+                          // Not matched
+                          termBoxes.forEach(termBox => {
+                              if (revealed.includes(termBox.querySelector('.term-box-title').textContent)) {
+                                  termBox.classList.add('incorrect-match');
+                              }
+                          });
 
-                definitionBoxes.forEach(definitionBox => {
-                    if (revealed.includes(definitionBox.querySelector('.definition-box-title').textContent)) {
-                        definitionBox.classList.add('incorrect-match');
-                    }
-                });
+                          definitionBoxes.forEach(definitionBox => {
+                              if (revealed.includes(definitionBox.querySelector('.definition-box-title').textContent)) {
+                                  definitionBox.classList.add('incorrect-match');
+                              }
+                          });
 
-                locked = true;
-                setTimeout(() => {
-                    termBoxes.forEach(termBox => {
-                        termBox.style.backgroundColor = "black";
-                        termBox.classList.remove('incorrect-match');
-                    });
+                          locked = true;
+                          setTimeout(() => {
+                              termBoxes.forEach(termBox => {
+                                  termBox.style.backgroundColor = "black";
+                                  termBox.classList.remove('incorrect-match');
+                              });
 
-                    definitionBoxes.forEach(definitionBox => {
-                        definitionBox.style.backgroundColor = "black";
-                        definitionBox.classList.remove('incorrect-match');
-                    });
+                              definitionBoxes.forEach(definitionBox => {
+                                  definitionBox.style.backgroundColor = "black";
+                                  definitionBox.classList.remove('incorrect-match');
+                              });
 
-                    revealed = [];
-                    locked = false;
-                }, 1000);
-            }
+                              revealed = [];
+                              locked = false;
+                          }, 1000);
+                      }
 
-            revealed = [];
+                      revealed = [];
 
-            // Check if all pairs are matched (game completed)
-            if (document.querySelectorAll('.term-box.matched').length === 4) {
-                showModal(); // Call the function to show the completion modal
-            }
-        }
+                      // Check if all pairs are matched (game completed)
+                      if (document.querySelectorAll('.term-box.matched').length === 4) {
+                          showModal(); // Call the function to show the completion modal
+                      }
+                  }
 
-        function showModal() {
-            const modal = document.getElementById('completionModal');
-            modal.style.display = 'block';
-        }
+                  function showModal() {
+                      const modal = document.getElementById('completionModal');
+                      modal.style.display = 'block';
+                  }
 
-        function closeModal() {
-            const modal = document.getElementById('completionModal');
-            modal.style.display = 'none';
-        }
+                  function closeModal() {
+                      const modal = document.getElementById('completionModal');
+                      modal.style.display = 'none';
+                  }
 
-        function rewardUser() {
-            // Add logic for rewarding the player for each correct match
-            // You can use emojis or XP points, for example
-            alert('Correct match! 🌟');
-        }
+                  function rewardUser() {
+                      // Add logic for rewarding the player for each correct match
+                      // You can use emojis or XP points, for example
+                      alert('Correct match! 🌟');
+                  }
 
-        function claimReward() {
-            // Add logic for rewarding the player upon completing the game
-            // You can redirect to a reward page or display a confirmation message
-            alert('Reward claimed! Congratulations! 🎉');
-            closeModal();
-        }
+                  function claimReward() {
+                      // Add logic for rewarding the player upon completing the game
+                      // You can redirect to a reward page or display a confirmation message
+                      alert('Reward claimed! Congratulations! 🎉');
+                      closeModal();
+                  }
 
-        function shareAchievement() {
-            // Add logic for sharing the achievement
-            // You can use social media APIs or other sharing mechanisms
-            alert('Achievement shared! 🚀');
-            closeModal();
-        }
-    </script>
-</body>
-</html>
+                  function shareAchievement() {
+                      // Add logic for sharing the achievement
+                      // You can use social media APIs or other sharing mechanisms
+                      alert('Achievement shared! 🚀');
+                      closeModal();
+                  }
+              </script>
+          </body>
+          </html>
+    

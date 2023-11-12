@@ -94,12 +94,21 @@
               </div>
               <p class="confidence-description">Ready to level up your money game? Adjust the slider to reveal your current level of financial courage.</p>
           </div>
-          <div class="debt-savings">
+          
               <h2>Your Financial Stats</h2>
-              <div class="debt-input">
+        <div class="savings-input">
+          <label for="savings-amount">Current Income:</label>
+          <input type="number" name="savings-amount" id="savings-amount" placeholder="Enter Amount">
+        </div>
+        <div class="debt-savings">
+              <div class="savings-input">
                   <label for="debt-amount">Current Debt:</label>
                   <input type="number" name="debt-amount" id="debt-amount" placeholder="Enter Amount">
               </div>
+            <div class="savings-input">
+                <label for="savings-amount">What Kind of Debt:</label>
+                <input type="number" name="savings-amount" id="savings-amount" placeholder="Enter type">
+            </div>
               <div class="savings-input">
                   <label for="savings-amount">Current Savings:</label>
                   <input type="number" name="savings-amount" id="savings-amount" placeholder="Enter Amount">
@@ -127,6 +136,9 @@
               <div class="short-term-goal">
                   <label for="short-term-goal">Select Short-Term Goal:</label>
                   <select name="short-term-goal" id="short-term-goal">
+
+                    <option value="build-emergency-fund">Select</option>
+                    
                     <option value="build-emergency-fund">Build Your Emergency Fund💰</option>
                     <option value="invest-in-stocks">Dive into Stock Market Investing📈</option>
                     <option value="reduce-credit-card-debt">Slash Credit Card Debt🔪</option>
@@ -154,6 +166,9 @@
               <div class="long-term-goal">
                   <label for="long-term-goal">Select Long-Term Goal:</label>
                   <select name="long-term-goal" id="long-term-goal">
+
+                    <option value="build-emergency-fund">Select</option>
+                    
                     <option value="achieve-financial-independence">Achieve Financial Independence🌅</option>
                     <option value="invest-for-retirement">Invest for a Blissful Retirement🌴</option>
                     <option value="own-your-dream-home">Own Your Dream Home🏡</option>
@@ -182,7 +197,7 @@
 
           <div class="goal-info">
               <h2>Create Your Own Quest</h2>
-              <input class="input-field" type="text" id="goal-description" placeholder="Enter Your Custom Goal Description" required>
+              <input class="input-field" type="text" id="goal-description" placeholder="Enter Your Custom Goal Description (THINK BIG!🚀)" required>
           </div>
 
           <div class="goal-info">
@@ -199,7 +214,7 @@
           <button class="input-field animated-btn" id="goal-next" type="button">Next</button>
       </form>
 
-    <div id="goalSummary" style="background-color: pink">
+    <div id="goalSummary" style="background-color: gray">
       <h3 id="goalTitle">My Goal:</h3>
       <p>Raise <span id="goalAmount"></span></p> by <span id="goalDate"></span>.
     </div>
@@ -210,7 +225,7 @@
 
   <!-- Dashboard Page #1-->
   <div class="container" id="dashboard-container" style="display: none;">
-        <h1 class="page-title">Your Custom Dashboard</h1>
+        <h1 class="page-title">KG's Custom Dashboard</h1>
 
         <!-- Profile Dashboard -->
         <div class="dashboard-item profile-dashboard">
@@ -222,7 +237,7 @@
                 <span class="xp">XP</span>
               </p>
                     <p><span class="streak">24 Days  </span> <img src="Fire Emoji.jpg" alt="Fire Icon"></p>
-                    <p><span class="health">8/10</span> <img src="Heart.jpeg" alt="Health Icon" style="height: 40px; width: auto;"</p>
+                    <p><span class="health">3/5</span> <img src="Heart.jpeg" alt="Health Icon" style="height: 40px; width: auto;"</p>
                 </div>
                 <div class="profile-buttons">
                     <a href="#" class="level-button">Level 2</a>
@@ -258,17 +273,17 @@
           <tr>
             <td>Grad School</td>
             <td>$6.1k</td>
-            <td class="percentage negative">-5%</td>
+            <td class="percentage negative">-5.23%</td>
           </tr>
           <tr>
             <td>Rainy Day Fund</td>
             <td>$365</td>
-            <td class="percentage positive">+6%</td>
+            <td class="percentage positive">+6.96%</td>
           </tr>
           <tr>
             <td>Dream Car</td>
             <td>$2.4k</td>
-            <td class="percentage positive">+8%</td>
+            <td class="percentage positive">+8.96%</td>
           </tr>
         </table>
       </div>
@@ -281,15 +296,15 @@
         <!-- My Goals Section -->
     <div class="my-goals">
         <div class="goal-container ">
-            <div class="seventy-three progress-circle ">73%</div>
+            <div class="seventy-three progress-circle ">73.24%</div>
             <p>Rainy Day Fund</p>
         </div>
         <div class="goal-container ">
-            <div class="twenty-one progress-circle">21%</div>
+            <div class="twenty-one progress-circle">21.11%</div>
             <p>Pay off Credit Card</p>
         </div>
         <div class="goal-container ">
-            <div class="five progress-circle">5%</div>
+            <div class="five progress-circle">5.88%</div>
             <p>Dream Car</p>
         </div>
       <div class="bottom-navigation">
@@ -361,7 +376,7 @@
           <p>Rainy Day☔️</p>
           <div class="section-buttons">
             <p class="account-change">($365.00)</p>
-            <p class="account-amount positive">(-20.00) (+6%)</p>
+            <p class="account-amount positive">(-20.00) (+6.12%)</p>
             <button class="edit-add-button">Edit</button>
             <button class="edit-add-button">Add</button>
           </div>
@@ -372,7 +387,7 @@
             <p>Knee Surgery🩻</p>
             <div class="section-buttons">
               <p class="account-change">($2,423.42)</p>
-              <p class="account-amount negative">(-$12.00) (-12%)</p>
+              <p class="account-amount negative">(-$12.00) (-12.21%)</p>
               <button class="edit-add-button">Edit</button>
               <button class="edit-add-button">Add</button>
             </div>
