@@ -115,11 +115,11 @@
   }
 
   /* Confidence scale styling */
-  #confidence {
+  .confidence {
     width: 80%;
     margin: 10px;
-    background-color: black;
-    color: #00ff99;
+    background-color: #00ff99;
+    color: black ;
   }
 
   .confidence-value {
@@ -357,6 +357,7 @@
     width: 30%;
     /* Adjust the width as needed */
     text-align: right;
+    animation: heartbeat 1.5s infinite;
   }
 
   .profile-picture img {
@@ -364,6 +365,7 @@
     /* Ensure the image takes up the entire container */
     border-radius: 10px;
     /* Add a border radius for a circular effect */
+
   }
 
   /* Accounts Dashboard - Half Height with Font Adjustments */
@@ -441,23 +443,24 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 30%;
+    width: 100%;
     /* Set a width for each container */
   }
 
   .goal-container p {
-    width: 70%;
+    width: 100%;
   }
 
   .goal-container .progress-circle {
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     border: 2px solid #00ff99;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #00ff99;
+     animation: heartbeat 1.5s infinite;
     text-shadow: 0px 0px 10px #00ff99;
  
   }
@@ -516,7 +519,7 @@
     z-index: 1;
   }
 
-  /* My Goals Section */
+  /* My Goals Section w/ Circle progress graphs */
   .my-goals {
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.6);
@@ -525,10 +528,11 @@
     box-shadow: 0px 0px 10px 0px #00ff99;
     display: flex;
     flex-direction: row;
+   
     /* Display containers vertically */
     align-items: center;
     /* Center content horizontally */
-    width: 100%;
+    width: 90%;
     /* Take the full width */
     text-align: center;
     /* Center the text */
@@ -545,7 +549,7 @@
     flex-direction: row;
     /* Display containers side by side */
     justify-content: space-between;
-    width: 100%;
+    width: 90%;
     flex-wrap: wrap;
     /* Allow containers to wrap when the screen is narrow */
   }
@@ -574,7 +578,7 @@
   }
 
   .goal-container p {
-    width: 100%;
+    width: 85%;
     /* Take the full width */
     margin: 10px 0;
   }
@@ -601,10 +605,6 @@
     margin: 10px 0;
     /* Add margin for spacing */
   }
-
-  /* Add this CSS to your stylesheet */
-
-
 
   /* Hover styles for links */
   .bottom-navigation li a:hover {
@@ -703,13 +703,13 @@
   height: 100%; /* Should match the height of the progress bar */
 }
 
-  /* Add these styles to your existing CSS for other elements */
+
   /* Additional styles for User Profile Visualization */
   .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 400px;
+    width: 500px;
     background-color: rgba(0, 0, 0, 0.6);
     padding: 30px;
     border-radius: 10px;
@@ -733,7 +733,6 @@
   }
 
   /* Additional styles for User Profile Visualization */
-  /* ... (Previous CSS) ... */
 
   /* Styles for section headers and buttons */
   .section-header {
@@ -946,7 +945,9 @@
     display: flex;
     justify-content: space-around;
     padding: 10px 0;
-    left: 0px
+    left: 0px;
+    z-index: 9999;
+  
    
 }
 

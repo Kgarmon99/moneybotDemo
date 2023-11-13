@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <style>
+      <div class="container" id="dashboard-container" style="display: flex;">
         /* Reset default margin and padding */
         * {
             margin: 0;
@@ -88,7 +89,7 @@
         .stage {
             width: 350px;
             height: 350px;
-            background-color: #1a1a1a;
+            background-color: #black;
             border: 5px solid #00ff99; /* Bright green border */
             border-radius: 50%;
             padding: 20px;
@@ -100,6 +101,7 @@
             flex-direction: column;
             justify-content: space-evenly; /* Vertically center content */
             align-items: center;
+            animation: heartbeat 1.5s infinite;
         }
 
         .stage:nth-child(odd) {

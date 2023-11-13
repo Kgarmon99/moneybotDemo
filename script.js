@@ -71,7 +71,7 @@ const confidenceSlider = document.getElementById('confidence');
 const confidenceValue = document.getElementById('confidence-value');
 
 // Define your confidence levels
-const confidenceLevels = ['Newbie👶🏾','Getting There📈', 'Average👌', 'Confident🫡', 'Super Confident🦸🏾‍♂️','Im Rich Bitch🤑'];
+const confidenceLevels = ['Newbie👶🏾','Getting There📈', 'Average👌', 'Confident🫡', 'Super Confident🦸🏾‍♂️','Im Rich B****🤑'];
 
 // Add an event listener to the slider to update the displayed value
 confidenceSlider.addEventListener('input', function() {
